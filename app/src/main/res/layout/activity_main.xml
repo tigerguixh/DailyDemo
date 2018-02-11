@@ -4,7 +4,10 @@
     android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/observable"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="50dp"
+        android:onClick="onButtonClick"
+        android:text="监听者模式"/>
 
 </LinearLayout>
