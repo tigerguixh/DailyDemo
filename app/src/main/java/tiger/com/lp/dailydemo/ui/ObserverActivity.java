@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import tiger.com.lp.dailydemo.R;
 import tiger.com.lp.dailydemo.designpatterns.observer.ActivityController;

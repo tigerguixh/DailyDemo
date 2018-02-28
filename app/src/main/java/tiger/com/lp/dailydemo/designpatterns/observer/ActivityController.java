@@ -1,7 +1,6 @@
 package tiger.com.lp.dailydemo.designpatterns.observer;
 
 import android.content.Context;
-import android.database.DataSetObservable;
 import android.database.DataSetObserver;
 
 /**
