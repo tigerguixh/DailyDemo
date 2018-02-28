@@ -7,7 +7,7 @@ package tiger.com.lp.dailydemo.designpatterns.decorator;
  * @description
  */
 
-public class Change implements TheGreatestSage{
+public abstract class Change implements TheGreatestSage{
     private TheGreatestSage greatestSage;
 
     public Change(TheGreatestSage greatestSage) {
