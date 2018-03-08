@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import tiger.com.lp.dailydemo.ui.MemoryActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.observable:
                 startActivity(new Intent(this, ObserverActivity.class));
+                break;
+            case R.id.memory:
+                startActivity(new Intent(this, MemoryActivity.class));
                 break;
         }
     }
