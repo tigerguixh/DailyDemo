@@ -16,5 +16,11 @@
         android:layout_height="50dp"
         android:onClick="onButtonClick"
         android:text="内存监测"/>
+    <Button
+        android:id="@+id/timer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onButtonClick"
+        android:text="定时器"/>
 
 </LinearLayout>

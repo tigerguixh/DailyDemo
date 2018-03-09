@@ -7,6 +7,7 @@ import android.view.View;
 
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
+import tiger.com.lp.dailydemo.ui.TimerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.memory:
                 startActivity(new Intent(this, MemoryActivity.class));
+                break;
+            case R.id.timer:
+                startActivity(new Intent(this, TimerActivity.class));
                 break;
         }
     }

@@ -22,6 +22,7 @@
         </activity>
         <activity android:name=".ui.ObserverActivity" />
         <activity android:name=".ui.MemoryActivity" />
+        <activity android:name=".ui.TimerActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>
