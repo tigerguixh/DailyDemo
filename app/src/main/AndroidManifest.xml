@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +24,7 @@
         <activity android:name=".ui.ObserverActivity" />
         <activity android:name=".ui.MemoryActivity" />
         <activity android:name=".ui.TimerActivity" />
+        <activity android:name=".ui.NetworkActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

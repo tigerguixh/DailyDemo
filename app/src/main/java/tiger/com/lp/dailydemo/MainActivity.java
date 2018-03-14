@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
+import tiger.com.lp.dailydemo.ui.NetworkActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
 
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.timer:
                 startActivity(new Intent(this, TimerActivity.class));
+                break;
+            case R.id.network:
+                startActivity(new Intent(this, NetworkActivity.class));
                 break;
         }
     }
