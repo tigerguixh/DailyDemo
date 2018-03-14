@@ -21,10 +21,16 @@ public class Client {
         commandChangeChannel.setTv(tv);
         commandChangeChannel.setChannel(1);
 
+        MacroCommand macroCommand = new MacroTvCommand();
+        macroCommand.add(commandOn);
+        macroCommand.add(commandOff);
+
         Controller controller = new Controller(commandOn, commandOff, commandChangeChannel);
 
+        controller.setMarcoCommand(macroCommand);
         controller.turnChangeChannel();
         controller.turnOn();
         controller.turnOff();
+        controller.turnMarco();
     }
 }

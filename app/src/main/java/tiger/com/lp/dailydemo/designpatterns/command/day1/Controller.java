@@ -9,11 +9,20 @@ package tiger.com.lp.dailydemo.designpatterns.command.day1;
 
 public class Controller {
     private Command commandOn, commandOff, commandChangeChannel;
+    private Command marcoCommand;
 
     public Controller(Command commandOn, Command commandOff, Command commandChangeChannel) {
         this.commandOn = commandOn;
         this.commandOff = commandOff;
         this.commandChangeChannel = commandChangeChannel;
+    }
+
+    public void setMarcoCommand(Command marcoCommand) {
+        this.marcoCommand = marcoCommand;
+    }
+
+    public void turnMarco() {
+        marcoCommand.execute();
     }
 
     public void turnOn() {
