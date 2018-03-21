@@ -28,5 +28,17 @@
         android:layout_height="50dp"
         android:onClick="onButtonClick"
         android:text="测网络"/>
+    <Button
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onButtonClick"
+        android:text="glide加载图片"/>
+    <Button
+        android:id="@+id/single"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onButtonClick"
+        android:text="信号强度"/>
 
 </LinearLayout>

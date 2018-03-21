@@ -5,9 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import tiger.com.lp.dailydemo.ui.ImageActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
 import tiger.com.lp.dailydemo.ui.NetworkActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
+import tiger.com.lp.dailydemo.ui.SignalActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.network:
                 startActivity(new Intent(this, NetworkActivity.class));
+                break;
+            case R.id.image:
+                startActivity(new Intent(this, ImageActivity.class));
+                break;
+            case R.id.single:
+                startActivity(new Intent(this, SignalActivity.class));
                 break;
         }
     }
