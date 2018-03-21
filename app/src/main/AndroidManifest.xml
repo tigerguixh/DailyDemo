@@ -29,6 +29,7 @@
         <activity android:name=".ui.NetworkActivity" />
         <activity android:name=".ui.ImageActivity" />
         <activity android:name=".ui.SignalActivity" />
+        <activity android:name=".ui.PingActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

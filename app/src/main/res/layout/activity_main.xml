@@ -40,5 +40,11 @@
         android:layout_height="50dp"
         android:onClick="onButtonClick"
         android:text="信号强度"/>
+    <Button
+        android:id="@+id/ping"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onButtonClick"
+        android:text="PING网络"/>
 
 </LinearLayout>
