@@ -71,7 +71,7 @@ public class HttpUploadTest extends Thread {
             uploadedKByte = 0;
             startTime = System.currentTimeMillis();
 
-            ExecutorService executor = Executors.newFixedThreadPool(10);
+            ExecutorService executor = Executors.newFixedThreadPool(2);
             for (int i = 0; i < 10; i++) {
                 executor.execute(new HandlerUpload(url));
             }
@@ -85,7 +85,7 @@ public class HttpUploadTest extends Thread {
 
             long now = System.currentTimeMillis();
             uploadElapsedTime = (now - startTime) / 1000.0;
-            finalUploadRate = (Double) (((uploadedKByte / 1000.0) * 8) / uploadElapsedTime);
+            finalUploadRate = (((uploadedKByte / 1000.0)) / uploadElapsedTime);
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -118,7 +118,6 @@ class HandlerUpload extends Thread {
                 conn.setRequestProperty("Connection", "Keep-Alive");
 
                 DataOutputStream dos = new DataOutputStream(conn.getOutputStream());
-
 
                 dos.write(buffer, 0, buffer.length);
                 dos.flush();

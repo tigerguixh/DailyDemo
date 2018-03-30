@@ -14,6 +14,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.stealthcopter.networktools.Ping;
+import com.stealthcopter.networktools.PortScan;
+import com.stealthcopter.networktools.ping.PingResult;
+import com.stealthcopter.networktools.ping.PingStats;
+
 import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
 import org.achartengine.model.XYMultipleSeriesDataset;
@@ -21,6 +26,7 @@ import org.achartengine.model.XYSeries;
 import org.achartengine.renderer.XYMultipleSeriesRenderer;
 import org.achartengine.renderer.XYSeriesRenderer;
 
+import java.net.UnknownHostException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,6 +38,7 @@ import tiger.com.lp.dailydemo.controller.speet.GetSpeedTestHostsHandler;
 import tiger.com.lp.dailydemo.controller.speet.HttpDownloadTest;
 import tiger.com.lp.dailydemo.controller.speet.HttpUploadTest;
 import tiger.com.lp.dailydemo.controller.speet.PingTest;
+import tiger.com.lp.dailydemo.utils.PingUtils;
 
 /**
  * @author gxh
@@ -52,6 +59,30 @@ public class NetworkActivity extends Activity{
 
         getSpeedTestHostsHandler = new GetSpeedTestHostsHandler();
         getSpeedTestHostsHandler.start();
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    PingStats stats = PingUtils.onAddress("yd.huikaixin.cn").setTimeOutMillis(1000).setTimes(5).doPing();
+                    // Asynchronously
+                    /*Ping.onAddress("cc.com.cn").setTimeOutMillis(1000).setTimes(5).doPing(new Ping.PingListener() {
+                        @Override
+                        public void onResult(PingResult pingResult) {
+                            System.out.print("pingResult: " + pingResult);
+                        }
+
+                        @Override
+                        public void onFinished(PingStats pingStats) {
+                            System.out.print("pingStats: " + pingStats);
+                        }
+                    });*/
+                    System.out.print("pingStats: " + stats);
+                } catch (UnknownHostException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     @Override

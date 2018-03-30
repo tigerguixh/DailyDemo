@@ -46,5 +46,11 @@
         android:layout_height="50dp"
         android:onClick="onButtonClick"
         android:text="PING网络"/>
+    <Button
+        android:id="@+id/open_assets"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onButtonClick"
+        android:text="打开assets文件"/>
 
 </LinearLayout>

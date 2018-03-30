@@ -9,6 +9,7 @@ import tiger.com.lp.dailydemo.ui.ImageActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
 import tiger.com.lp.dailydemo.ui.NetworkActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
+import tiger.com.lp.dailydemo.ui.OpenFileActivity;
 import tiger.com.lp.dailydemo.ui.PingActivity;
 import tiger.com.lp.dailydemo.ui.SignalActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.ping:
                 startActivity(new Intent(this, PingActivity.class));
+                break;
+            case R.id.open_assets:
+                startActivity(new Intent(this, OpenFileActivity.class));
                 break;
         }
     }

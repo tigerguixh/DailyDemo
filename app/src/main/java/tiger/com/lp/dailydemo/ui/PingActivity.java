@@ -83,10 +83,11 @@ public class PingActivity extends Activity{
     public void testPing() throws Exception{
         String lost = new String();
         String delay = new String();
-        Process p = Runtime.getRuntime().exec("ping -c 4 " + "www.baidu.com");
+        Process p = Runtime.getRuntime().exec("ping -c 4 " + "ydtest.ds365.com");
         BufferedReader buf = new BufferedReader(new InputStreamReader(p.getInputStream()));
         String str = new String();
         while((str=buf.readLine())!=null){
+            System.out.println("ping结果: " + str);
             if(str.contains("packet loss")){
                 int i= str.indexOf("received");
                 int j= str.indexOf("%");
@@ -101,7 +102,6 @@ public class PingActivity extends Activity{
                 delay =str.substring(i+1, j);
                 delay = delay+"ms";
             }
-
         }
     }
 
