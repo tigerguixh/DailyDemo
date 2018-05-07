@@ -10,11 +10,22 @@
         android:text="点我" />
 
 
-    <TextView
+    <tiger.com.lp.dailydemo.designpatterns.observer.concrete.ObserverTextView
         android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="40sp"
         android:textStyle="bold"
         android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="135dp"
+        android:text="点我也行" />
+
+
 </RelativeLayout>

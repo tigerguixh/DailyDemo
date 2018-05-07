@@ -9,4 +9,10 @@ import java.util.Observable;
  * @Description :
  */
 public class SubjectObsevable extends Observable{
+
+    public void update(String content) {
+        setChanged();
+
+        notifyObservers(content);
+    }
 }

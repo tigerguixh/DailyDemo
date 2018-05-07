@@ -12,6 +12,8 @@ import tiger.com.lp.dailydemo.designpatterns.observer.BaseModel;
 import tiger.com.lp.dailydemo.designpatterns.observer.Demo;
 import tiger.com.lp.dailydemo.designpatterns.observer.DemoObserver;
 import tiger.com.lp.dailydemo.designpatterns.observer.ObserverController;
+import tiger.com.lp.dailydemo.designpatterns.observer.concrete.ObserverTextView;
+import tiger.com.lp.dailydemo.designpatterns.observer.concrete.SubjectObsevable;
 
 /**
  * @author gxh
@@ -24,7 +26,7 @@ public class ObserverActivity extends Activity{
     private ActivityController activityController;
     private DemoObserver demoObserver;
 
-    private TextView info;
+    private ObserverTextView info;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +42,13 @@ public class ObserverActivity extends Activity{
             }
         });
 
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeData();
+            }
+        });
+
         activityController = new ObserverController<>(this);
         demoObserver = new DemoObserver() {
             @Override
@@ -49,6 +58,14 @@ public class ObserverActivity extends Activity{
         };
 
         demoObserver.initialize(activityController);
+    }
+
+    private void changeData() {
+        SubjectObsevable obsevable = new SubjectObsevable();
+
+        obsevable.addObserver(info);
+
+        obsevable.update("监听者模式");
     }
 
     @Override
