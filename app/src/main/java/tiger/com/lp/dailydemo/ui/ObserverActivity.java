@@ -1,6 +1,7 @@
 package tiger.com.lp.dailydemo.ui;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -58,6 +59,14 @@ public class ObserverActivity extends Activity{
         };
 
         demoObserver.initialize(activityController);
+
+        getHost("http://androidapi22.tadu.com");
+    }
+
+    public String getHost(String url) {
+        Uri uri = Uri.parse(url);
+        String s = "da";
+        return "";
     }
 
     private void changeData() {
