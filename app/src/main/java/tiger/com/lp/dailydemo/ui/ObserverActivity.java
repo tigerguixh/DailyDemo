@@ -65,6 +65,7 @@ public class ObserverActivity extends Activity{
 
     public String getHost(String url) {
         Uri uri = Uri.parse(url);
+
         return "";
     }
 
