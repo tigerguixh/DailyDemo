@@ -7,6 +7,10 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.ico_annotation.BindView;
+import com.example.ico_annotation.ContentView;
+import com.example.ioc_apu.ViewInjector;
+
 import tiger.com.lp.dailydemo.R;
 import tiger.com.lp.dailydemo.designpatterns.observer.ActivityController;
 import tiger.com.lp.dailydemo.designpatterns.observer.BaseModel;
@@ -23,19 +27,19 @@ import tiger.com.lp.dailydemo.designpatterns.observer.concrete.SubjectObsevable;
  * @description
  */
 
+@ContentView(R.layout.activity_observer)
 public class ObserverActivity extends Activity{
     private ActivityController activityController;
     private DemoObserver demoObserver;
 
-    private ObserverTextView info;
+    @BindView(R.id.info_ob)
+    public ObserverTextView info;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_observer);
-        info = findViewById(R.id.info);
-
+        ViewInjector.injectView(this);
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

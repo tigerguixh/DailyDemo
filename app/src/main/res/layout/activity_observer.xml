@@ -11,7 +11,7 @@
 
 
     <tiger.com.lp.dailydemo.designpatterns.observer.concrete.ObserverTextView
-        android:id="@+id/info"
+        android:id="@+id/info_ob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="40sp"

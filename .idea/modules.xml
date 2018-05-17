@@ -4,6 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DailyDemo.iml" filepath="$PROJECT_DIR$/DailyDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ico-annotation/ico-annotation.iml" filepath="$PROJECT_DIR$/ico-annotation/ico-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ioc-api/ioc-api.iml" filepath="$PROJECT_DIR$/ioc-api/ioc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ioc-apu/ioc-apu.iml" filepath="$PROJECT_DIR$/ioc-apu/ioc-apu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ioc-compiler/ioc-compiler.iml" filepath="$PROJECT_DIR$/ioc-compiler/ioc-compiler.iml" />
     </modules>
   </component>
 </project>

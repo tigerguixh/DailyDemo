@@ -9,6 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/ico-annotation" />
+            <option value="$PROJECT_DIR$/ioc-api" />
+            <option value="$PROJECT_DIR$/ioc-apu" />
+            <option value="$PROJECT_DIR$/ioc-compiler" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
