@@ -10,7 +10,7 @@ import android.database.DataSetObserver;
  * @description
  */
 
-public abstract class ActivityController implements AbstractController{
+public abstract class ActivityController implements AbstractController<Demo>{
     protected Context context;
     protected AbstractObservable observable;
 

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import tiger.com.lp.dailydemo.ui.FloatingButtonActivity;
 import tiger.com.lp.dailydemo.ui.ImageActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
 import tiger.com.lp.dailydemo.ui.NetworkActivity;
@@ -47,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.open_assets:
                 startActivity(new Intent(this, OpenFileActivity.class));
+                break;
+            case R.id.floating_button:
+                startActivity(new Intent(this, FloatingButtonActivity.class));
                 break;
         }
     }

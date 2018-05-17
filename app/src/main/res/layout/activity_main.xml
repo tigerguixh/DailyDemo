@@ -52,5 +52,11 @@
         android:layout_height="50dp"
         android:onClick="onButtonClick"
         android:text="打开assets文件"/>
+    <Button
+        android:id="@+id/floating_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onButtonClick"
+        android:text="浮动按钮"/>
 
 </LinearLayout>

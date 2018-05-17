@@ -7,7 +7,7 @@ package tiger.com.lp.dailydemo.designpatterns.observer;
  * @description
  */
 
-public abstract class DemoObservable extends AbstractObservable{
+public abstract class DemoObservable extends AbstractObservable<Demo>{
 
     public DemoObservable(String name) {
         super(name);

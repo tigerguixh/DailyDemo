@@ -9,7 +9,7 @@ import tiger.com.lp.dailydemo.utils.LogUtils;
  * @description
  */
 
-public abstract class DemoObserver extends AbstractObserver{
+public abstract class DemoObserver extends AbstractObserver<Demo>{
     private ActivityController activityController;
 
     public void initialize(ActivityController activityController) {

@@ -50,23 +50,22 @@ public class ObserverActivity extends Activity{
             }
         });
 
-        activityController = new ObserverController<>(this);
+        activityController = new ObserverController(this);
         demoObserver = new DemoObserver() {
+
             @Override
-            public <T extends BaseModel> void onChanged(T demo) {
+            public void onChanged(Demo demo) {
                 info.setText(demo.toString());
             }
         };
 
         demoObserver.initialize(activityController);
 
-        getHost("http://androidapi22.tadu.com");
+        //getHost("http://androidapi22.tadu.com");
     }
 
     public String getHost(String url) {
         Uri uri = Uri.parse(url);
-
-
         return "";
     }
 

@@ -30,6 +30,27 @@ android {
             url "https://jitpack.io"
         }
     }
+
+    // 此处设置不同包名的apk信息
+    productFlavors {
+        // app生产环境配置
+        app {
+            applicationId 'tiger.com.lp.dailydemo'
+            manifestPlaceholders = [app_name: "DailyDemo", app_icon: "@mipmap/ic_launcher"]
+        }
+
+        // 马甲包的配置信息
+        app1 {
+            applicationId 'tiger.com.lp.dailydemo1'
+            manifestPlaceholders = [app_name: "DailyDemo1", app_icon: "@mipmap/ic_launcher"]
+        }
+    }
+
+    // lint检查，防止打包因为一些警告而停止
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -39,6 +60,8 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:4.6.0'
     compile 'com.yanzhenjie:recyclerview-swipe:1.1.4'
     compile 'com.github.stealthcopter:AndroidNetworkTools:0.3.0'
+    compile 'com.android.support:design:25.3.1'
 
     compile 'com.luffykou:android-common-utils:1.1.3'
+
 }

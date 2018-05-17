@@ -9,6 +9,6 @@ import android.database.DataSetObserver;
  * @description
  */
 
-public abstract class AbstractObserver extends DataSetObserver{
-    public abstract <T extends BaseModel> void onChanged(T demo);
+public abstract class AbstractObserver<T extends BaseModel> extends DataSetObserver{
+    public abstract void onChanged(T demo);
 }

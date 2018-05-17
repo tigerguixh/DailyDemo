@@ -9,22 +9,23 @@ import android.content.Context;
  * @description
  */
 
-public class ObserverController<T extends Demo> extends ActivityController{
+public class ObserverController extends ActivityController{
     private Demo demo;
 
     public ObserverController(Context context) {
         super(context);
 
         observable = new DemoObservable("DemoObservable") {
+
             @Override
-            public <T extends BaseModel> void notifyChanged(T t) {
-                setInfo(t);
+            public void notifyChanged(Demo demo) {
+                setInfo(demo);
             }
         };
     }
 
-    private void setInfo(BaseModel t) {
-        demo = (Demo) t;
+    private void setInfo(Demo demo) {
+        this.demo = demo;
         observable.notifyChanged();
     }
 
@@ -34,7 +35,7 @@ public class ObserverController<T extends Demo> extends ActivityController{
     }
 
     @Override
-    public void requestRefresh(BaseModel o) {
-        observable.notifyChanged(o);
+    public void requestRefresh(Demo demo) {
+        observable.notifyChanged(demo);
     }
 }

@@ -12,14 +12,14 @@ import tiger.com.lp.dailydemo.utils.LogUtils;
  * @description
  */
 
-public abstract class AbstractObservable extends DataSetObservable{
+public abstract class AbstractObservable<T extends BaseModel> extends DataSetObservable{
     private String name;
 
     public AbstractObservable(String name) {
         this.name = name;
     }
 
-    public abstract <T extends BaseModel> void notifyChanged(T t);
+    public abstract void notifyChanged(T t);
 
     @Override
     public void registerObserver(DataSetObserver observer) {
