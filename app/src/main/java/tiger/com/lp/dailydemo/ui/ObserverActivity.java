@@ -54,6 +54,7 @@ public class ObserverActivity extends Activity{
             }
         });
 
+
         activityController = new ObserverController(this);
         demoObserver = new DemoObserver() {
 
