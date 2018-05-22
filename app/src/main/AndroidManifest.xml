@@ -32,6 +32,7 @@
         <activity android:name=".ui.PingActivity" />
         <activity android:name=".ui.OpenFileActivity" />
         <activity android:name=".ui.FloatingButtonActivity" />
+        <activity android:name=".ui.ScrollingActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

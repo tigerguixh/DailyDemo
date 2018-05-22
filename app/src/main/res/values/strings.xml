@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">DailyDemo</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
+    <string name="header_scrolling_behavior">tiger.com.lp.dailydemo.widget.HeaderScrollingBehavior</string>
+    <string name="header_float_behavior">tiger.com.lp.dailydemo.widget.HeaderFloatBehavior</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

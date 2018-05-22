@@ -58,5 +58,11 @@
         android:layout_height="50dp"
         android:onClick="onButtonClick"
         android:text="浮动按钮"/>
+    <Button
+        android:id="@+id/nest_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onButtonClick"
+        android:text="嵌套联动"/>
 
 </LinearLayout>

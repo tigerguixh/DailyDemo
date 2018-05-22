@@ -12,6 +12,7 @@ import tiger.com.lp.dailydemo.ui.NetworkActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
 import tiger.com.lp.dailydemo.ui.OpenFileActivity;
 import tiger.com.lp.dailydemo.ui.PingActivity;
+import tiger.com.lp.dailydemo.ui.ScrollingActivity;
 import tiger.com.lp.dailydemo.ui.SignalActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
 
@@ -51,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.floating_button:
                 startActivity(new Intent(this, FloatingButtonActivity.class));
+                break;
+            case R.id.nest_scroll:
+                startActivity(new Intent(this, ScrollingActivity.class));
                 break;
         }
     }
