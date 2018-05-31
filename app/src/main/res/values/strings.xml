@@ -1,9 +1,12 @@
 <resources>
-    <string name="app_name">DailyDemo</string>
+    <string name="app_name">个性生活</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
 
     <string name="header_scrolling_behavior">tiger.com.lp.dailydemo.widget.HeaderScrollingBehavior</string>
     <string name="header_float_behavior">tiger.com.lp.dailydemo.widget.HeaderFloatBehavior</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="appId">3103509808</string>
+    <string name="appKey">AKFBTZ52D49R</string>
 </resources>

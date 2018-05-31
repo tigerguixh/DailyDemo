@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 26
@@ -40,7 +41,7 @@ android {
     }
 
     // 此处设置不同包名的apk信息
-    productFlavors {
+    /*productFlavors {
         // app生产环境配置
         app {
             applicationId 'tiger.com.lp.dailydemo'
@@ -52,7 +53,7 @@ android {
             applicationId 'tiger.com.lp.dailydemo1'
             manifestPlaceholders = [app_name: "DailyDemo1", app_icon: "@mipmap/ic_launcher"]
         }
-    }
+    }*/
 
     // lint检查，防止打包因为一些警告而停止
     lintOptions {
@@ -73,5 +74,9 @@ dependencies {
     compile 'com.luffykou:android-common-utils:1.1.3'
     compile project(':ioc-api')
     annotationProcessor project(':ioc-compiler')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+}
+repositories {
+    mavenCentral()
 }
