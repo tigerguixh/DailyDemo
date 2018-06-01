@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
+        android:name=".application.ApplicationDaily"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -34,6 +35,20 @@
         <activity android:name=".ui.FloatingButtonActivity" />
         <activity android:name=".ui.ScrollingActivity" />
         <activity android:name=".ui.TextAutoLinkActivity" />
+        <activity android:name=".ui.ARouterActivity" />
+        <activity android:name=".ui.SchameFilterActivity">
+            <!--&lt;!&ndash; Schame &ndash;&gt;
+            <intent-filter>
+                <data
+                    android:host="m.aliyun.com"
+                    android:scheme="arouter"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>-->
+        </activity>
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

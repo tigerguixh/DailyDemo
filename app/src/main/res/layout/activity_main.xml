@@ -1,68 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/observable"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="监听者模式"/>
-    <Button
-        android:id="@+id/memory"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="内存监测"/>
-    <Button
-        android:id="@+id/timer"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="定时器"/>
-    <Button
-        android:id="@+id/network"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="测网络"/>
-    <Button
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="glide加载图片"/>
-    <Button
-        android:id="@+id/single"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="信号强度"/>
-    <Button
-        android:id="@+id/ping"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="PING网络"/>
-    <Button
-        android:id="@+id/open_assets"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="打开assets文件"/>
-    <Button
-        android:id="@+id/floating_button"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="浮动按钮"/>
-    <Button
-        android:id="@+id/nest_scroll"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:onClick="onButtonClick"
-        android:text="嵌套联动"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <Button
+            android:id="@+id/observable"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="监听者模式" />
+
+        <Button
+            android:id="@+id/memory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="内存监测" />
+
+        <Button
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="定时器" />
+
+        <Button
+            android:id="@+id/network"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="测网络" />
+
+        <Button
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="glide加载图片" />
+
+        <Button
+            android:id="@+id/single"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="信号强度" />
+
+        <Button
+            android:id="@+id/ping"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="PING网络" />
+
+        <Button
+            android:id="@+id/open_assets"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="打开assets文件" />
+
+        <Button
+            android:id="@+id/floating_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="浮动按钮" />
+
+        <Button
+            android:id="@+id/nest_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="嵌套联动" />
+
+        <Button
+            android:id="@+id/arouter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="路由实例1" />
+
+    </LinearLayout>
+</ScrollView>

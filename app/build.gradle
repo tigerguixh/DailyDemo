@@ -14,9 +14,9 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [testParam: 'I am diaobaole']
-                includeCompileClasspath true
-                classNames  = ["com.example.ioc_compiler.IocProcessor"]
+                arguments = [ moduleName : project.getName() ]
+                //includeCompileClasspath true
+                //classNames  = ["com.example.ioc_compiler.IocProcessor"]
             }
         }
     }
@@ -72,6 +72,8 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
 
     compile 'com.luffykou:android-common-utils:1.1.3'
+    compile 'com.alibaba:arouter-api:1.3.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
     compile project(':ioc-api')
     annotationProcessor project(':ioc-compiler')
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"

@@ -5,6 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.Postcard;
+import com.alibaba.android.arouter.facade.callback.NavigationCallback;
+import com.alibaba.android.arouter.launcher.ARouter;
+
+import tiger.com.lp.dailydemo.arouter.RouterPathList;
 import tiger.com.lp.dailydemo.ui.FloatingButtonActivity;
 import tiger.com.lp.dailydemo.ui.ImageActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
@@ -15,6 +20,7 @@ import tiger.com.lp.dailydemo.ui.PingActivity;
 import tiger.com.lp.dailydemo.ui.ScrollingActivity;
 import tiger.com.lp.dailydemo.ui.SignalActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
+import tiger.com.lp.dailydemo.utils.LogUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.nest_scroll:
                 startActivity(new Intent(this, ScrollingActivity.class));
+                break;
+            case R.id.arouter:
+                ARouter.getInstance().build(RouterPathList.ROUTER_FIRST)
+                        .withString("name", "Tiger")
+                        .navigation();
                 break;
         }
     }
