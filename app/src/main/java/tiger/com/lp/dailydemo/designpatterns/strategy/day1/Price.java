@@ -1,4 +1,4 @@
-package tiger.com.lp.dailydemo.designpatterns.Strategy.day1;
+package tiger.com.lp.dailydemo.designpatterns.strategy.day1;
 
 /**
  * @author : Xunhu.gui
