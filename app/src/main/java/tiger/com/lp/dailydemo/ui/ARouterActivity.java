@@ -21,12 +21,17 @@ import tiger.com.lp.dailydemo.utils.LogUtils;
 public class ARouterActivity extends Activity {
     @Autowired
     public String name;
+    @Autowired
+    public String extra;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ARouter.getInstance().inject(this);
 
-        LogUtils.e(LogUtils.TAG, "--->" + name);
+        LogUtils.e(LogUtils.TAG, extra + "--->" + name);
+
+        setResult(100);
+        finish();
     }
 }

@@ -76,6 +76,7 @@ dependencies {
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
     compile project(':ioc-api')
     annotationProcessor project(':ioc-compiler')
+    compile 'com.alibaba:fastjson:1.2.9'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
 }

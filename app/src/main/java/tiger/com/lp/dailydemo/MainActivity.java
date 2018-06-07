@@ -1,9 +1,11 @@
 package tiger.com.lp.dailydemo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.callback.NavigationCallback;
@@ -24,10 +26,14 @@ import tiger.com.lp.dailydemo.utils.LogUtils;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static Activity activity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        activity = this;
     }
 
     public void onButtonClick(View view) {
@@ -65,7 +71,18 @@ public class MainActivity extends AppCompatActivity {
             case R.id.arouter:
                 ARouter.getInstance().build(RouterPathList.ROUTER_FIRST)
                         .withString("name", "Tiger")
-                        .navigation();
+                        .navigation(this, 999);
+                break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case 999:
+                Toast.makeText(this, "Very good!", Toast.LENGTH_LONG).show();
                 break;
         }
     }
