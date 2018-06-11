@@ -20,8 +20,8 @@ public class Calculator {
         for (int i = 0, len = chars.length; i < len; i++) {
             switch (chars[i]) {
                 case '+':
-                    left = stack.pop();
-                    right = new VarExpression(String.valueOf(chars[++i]));
+                    left = stack.pop(); // 从栈中取回上一个压入的元素作为左侧表达式
+                    right = new VarExpression(String.valueOf(chars[++i])); // 取出右侧元素，因为值在表达式的右边，所以需要++i
                     stack.push(new Add(left, right));
                     break;
                 case '-':

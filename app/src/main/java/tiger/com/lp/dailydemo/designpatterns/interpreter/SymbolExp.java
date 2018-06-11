@@ -7,8 +7,8 @@ package tiger.com.lp.dailydemo.designpatterns.interpreter;
  * @Description :
  */
 public abstract class SymbolExp implements Expression{
-    protected Expression left;
-    protected Expression right;
+    protected Expression left; // 运算符左侧的表达式
+    protected Expression right; // 运算符右侧的表达式
 
     public SymbolExp(Expression left, Expression right) {
         this.left = left;

@@ -21,6 +21,6 @@ public class VarExpression implements Expression{
 
     @Override
     public double interpreter(HashMap<String, Double> vars) {
-        return vars.get(value);
+        return vars.get(value); // 返回表达式所对应的值
     }
 }
