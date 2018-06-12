@@ -11,5 +11,7 @@ public class VisterDemo {
         VisterA visterA = new VisterA();
         visterA.method1();
         visterA.method2(new VisterB());
+
+        // a d  d
     }
 }
