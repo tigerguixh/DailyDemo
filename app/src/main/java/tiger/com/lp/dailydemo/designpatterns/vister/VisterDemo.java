@@ -13,7 +13,5 @@ public class VisterDemo {
         visterA.method2(new VisterB());
 
         // a d  d
-
-
     }
 }
