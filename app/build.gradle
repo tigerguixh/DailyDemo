@@ -24,6 +24,16 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", "API_URL",
+                    "\"http://example.com/api\""
+            buildConfigField "boolean", "LOG_HTTP_CALLS","false"
+        }
+
+        debug {
+            buildConfigField "String", "API_URL",
+                    "\"http://test.example.com/api\""
+            buildConfigField "boolean", "LOG_HTTP_CALLS", "true"
         }
     }
 
