@@ -7,8 +7,15 @@ package tiger.com.lp.dailydemo.designpatterns.factory.day1;
  * @Description :
  */
 public class ShopFacotry extends VirFactory{
+
     @Override
-    public IMoveable concrete() {
-        return new Shop();
+    public <T extends IMoveable> T concrete(Class<T> clz) {
+        IMoveable moveable = null;
+        try{
+            moveable = (IMoveable) Class.forName(clz.getName()).newInstance();
+        } catch (Exception e) {
+
+        }
+        return (T) moveable;
     }
 }

@@ -6,6 +6,9 @@ package tiger.com.lp.dailydemo.designpatterns.factory.day1;
  * @date : 2018/7/12
  * @Description :
  */
-public abstract class VirFactory {
-    public abstract <T extends IMoveable> T concrete(Class<T> clz);
+public class SuperMarket implements IMoveable{
+    @Override
+    public void run() {
+
+    }
 }
