@@ -9,7 +9,7 @@ package tiger.com.lp.dailydemo.designpatterns.factory.day1;
 public class ShopClient {
     public static void main(String[] args) {
         ShopFacotry shopFacotry = new ShopFacotry();
-        IMoveable moveable = shopFacotry.concrete();
+        IMoveable moveable = shopFacotry.concrete(Shop.class);
         moveable.run();
     }
 }
