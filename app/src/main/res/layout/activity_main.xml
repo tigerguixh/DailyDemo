@@ -85,5 +85,19 @@
             android:onClick="onButtonClick"
             android:text="路由实例1" />
 
+        <Button
+            android:id="@+id/rxjava"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="RxJava" />
+
+        <Button
+            android:id="@+id/lottie"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="LOTTIE" />
+
     </LinearLayout>
 </ScrollView>

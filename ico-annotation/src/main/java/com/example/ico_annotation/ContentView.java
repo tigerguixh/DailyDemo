@@ -7,7 +7,6 @@ import java.lang.annotation.Target;
 
 /**
  *
- *      绑定ContentView的注解
  */
 
 @Target(ElementType.TYPE)

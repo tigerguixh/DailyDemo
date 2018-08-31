@@ -73,6 +73,14 @@ public class MainActivity extends AppCompatActivity {
                         .withString("name", "Tiger")
                         .navigation(this, 999);
                 break;
+            case R.id.rxjava:
+                ARouter.getInstance().build(RouterPathList.ROUTER_RXJAVA)
+                        .navigation();
+                break;
+            case R.id.lottie:
+                ARouter.getInstance().build(RouterPathList.ROUTER_LOTTIE)
+                        .navigation();
+                break;
         }
     }
 

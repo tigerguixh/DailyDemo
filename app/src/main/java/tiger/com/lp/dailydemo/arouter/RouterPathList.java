@@ -8,6 +8,8 @@ package tiger.com.lp.dailydemo.arouter;
  */
 public class RouterPathList {
     public static final String ROUTER_FIRST = "/test/activity";
+    public static final String ROUTER_RXJAVA = "/test/rxjava";
+    public static final String ROUTER_LOTTIE = "/test/lottie";
 
     public static final String ROUTER_JSON = "/service/json";
 }

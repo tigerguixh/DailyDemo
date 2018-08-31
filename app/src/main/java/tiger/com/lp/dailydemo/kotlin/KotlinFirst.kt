@@ -35,7 +35,12 @@ fun vars(vararg v:Int) {
 }
 
 class Greeter(val name: String) {
+    var a = "Tiger"
+    val b : Int = 3
+    var c = 3
+
     fun greet() {
+        c += 1
         println("Hello, $name")
     }
 }

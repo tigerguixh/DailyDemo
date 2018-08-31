@@ -36,6 +36,8 @@
         <activity android:name=".ui.ScrollingActivity" />
         <activity android:name=".ui.TextAutoLinkActivity" />
         <activity android:name=".ui.ARouterActivity" />
+        <activity android:name=".ui.RxJavaActivity" />
+        <activity android:name=".ui.LottieActivity" />
         <activity android:name=".ui.SchameFilterActivity">
             <!--&lt;!&ndash; Schame &ndash;&gt;
             <intent-filter>
