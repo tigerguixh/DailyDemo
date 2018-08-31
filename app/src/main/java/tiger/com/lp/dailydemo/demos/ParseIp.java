@@ -20,6 +20,9 @@ public class ParseIp {
             System.out.println(map.toString());
             InetAddress inetAddress = InetAddress.getByName(Uri.parse("https://media7.tadu.com").getHost());
             System.out.print(inetAddress.getHostAddress());
+
+
+
         } catch (Exception e) {}
     }
 }
