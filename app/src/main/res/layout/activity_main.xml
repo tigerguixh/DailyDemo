@@ -99,5 +99,19 @@
             android:onClick="onButtonClick"
             android:text="LOTTIE" />
 
+        <Button
+            android:id="@+id/animator"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="ANIMATOR" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="Login" />
+
     </LinearLayout>
 </ScrollView>

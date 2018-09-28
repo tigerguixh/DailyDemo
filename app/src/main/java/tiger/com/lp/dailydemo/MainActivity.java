@@ -12,6 +12,7 @@ import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
+import tiger.com.lp.dailydemo.ui.AnimatorActivity;
 import tiger.com.lp.dailydemo.ui.FloatingButtonActivity;
 import tiger.com.lp.dailydemo.ui.ImageActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
@@ -22,9 +23,8 @@ import tiger.com.lp.dailydemo.ui.PingActivity;
 import tiger.com.lp.dailydemo.ui.ScrollingActivity;
 import tiger.com.lp.dailydemo.ui.SignalActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
-import tiger.com.lp.dailydemo.utils.LogUtils;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     public static Activity activity;
 
@@ -79,6 +79,13 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.lottie:
                 ARouter.getInstance().build(RouterPathList.ROUTER_LOTTIE)
+                        .navigation();
+                break;
+            case R.id.animator:
+                startActivity(new Intent(this, AnimatorActivity.class));
+                break;
+            case R.id.login:
+                ARouter.getInstance().build(RouterPathList.ROUTER_LOGIN)
                         .navigation();
                 break;
         }
