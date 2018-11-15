@@ -113,5 +113,12 @@
             android:onClick="onButtonClick"
             android:text="Login" />
 
+        <Button
+            android:id="@+id/sync"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="同步框架" />
+
     </LinearLayout>
 </ScrollView>

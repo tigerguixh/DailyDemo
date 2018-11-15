@@ -1,7 +1,9 @@
 package tiger.com.lp.dailydemo.demos;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author : Xunhu.gui
@@ -27,6 +29,8 @@ public class ListDemo {
     }
 
     public static void main(String[] args) {
+        Map map = new HashMap();
+        System.out.println("--->" + map.get("==="));
         List<Demo> list = new ArrayList<>();
         list.add(new Demo("2"));
         list.add(new Demo("21"));

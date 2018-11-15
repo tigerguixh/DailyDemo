@@ -1,6 +1,8 @@
 package tiger.com.lp.dailydemo;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,6 +24,7 @@ import tiger.com.lp.dailydemo.ui.OpenFileActivity;
 import tiger.com.lp.dailydemo.ui.PingActivity;
 import tiger.com.lp.dailydemo.ui.ScrollingActivity;
 import tiger.com.lp.dailydemo.ui.SignalActivity;
+import tiger.com.lp.dailydemo.ui.SyncActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
 
 public class MainActivity extends Activity {
@@ -88,6 +91,9 @@ public class MainActivity extends Activity {
                 ARouter.getInstance().build(RouterPathList.ROUTER_LOGIN)
                         .navigation();
                 break;
+            case R.id.sync:
+                startActivity(new Intent(this, SyncActivity.class));
+                break;
         }
     }
 
@@ -100,5 +106,13 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "Very good!", Toast.LENGTH_LONG).show();
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        am.clearApplicationUserData();
     }
 }

@@ -1,6 +1,10 @@
 package tiger.com.lp.dailydemo.ui;
 
 import android.app.Activity;
+import android.content.Context;
+import android.net.DhcpInfo;
+import android.net.Uri;
+import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +14,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author gxh
@@ -29,6 +40,10 @@ public class PingActivity extends Activity{
 
         //Log.e("PingActivity",stringBuilder.toString());
         new NetPing().execute();
+
+        getIpAddress("http://media8111.tadu.com");
+        getLocalDNS();
+        getWifiNetInfo(this);
     }
 
     public String Ping(String str) {
@@ -161,4 +176,117 @@ public class PingActivity extends Activity{
             stringBuffer.append(text + "\n");
         }
     }
+
+    public static void getIpAddress(final String host) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                String ip = "";
+                try {
+                    InetAddress inetAddress = InetAddress.getByName(Uri.parse(host).getHost());
+                    ip = inetAddress.getHostAddress();
+                } catch (UnknownHostException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
+    private void getLocalDNS(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Process cmdProcess = null;
+                BufferedReader reader = null;
+                String dnsIP = "";
+                try {
+                    cmdProcess = Runtime.getRuntime().exec("getprop net.dns1");
+                    reader = new BufferedReader(new InputStreamReader(cmdProcess.getInputStream()));
+                    dnsIP = reader.readLine();
+                } catch (IOException e) {
+                } finally{
+                    try {
+                        reader.close();
+                    } catch (IOException e) {
+                    }
+                    cmdProcess.destroy();
+                }
+
+                getLocalIpAddress();
+                getLocalDns("dns1");
+            }
+        }).start();
+    }
+
+    public static String getLocalIpAddress() {
+        try {
+            for (Enumeration<NetworkInterface> en = NetworkInterface
+                    .getNetworkInterfaces(); en.hasMoreElements();) {
+                NetworkInterface intf = en.nextElement();
+                for (Enumeration<InetAddress> enumIpAddr = intf
+                        .getInetAddresses(); enumIpAddr.hasMoreElements();) {
+                    InetAddress inetAddress = enumIpAddr.nextElement();
+                    if (!inetAddress.isLoopbackAddress()) {
+                        return inetAddress.getHostAddress().toString();
+                    }
+                }
+            }
+        } catch (SocketException ex) {
+        }
+        return null;
+    }
+    public static Map<String,String> getWifiNetInfo(Context context){
+        Map<String,String> wifiInfo = new HashMap<>();
+        WifiManager wifi = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        if(wifi  != null){
+            DhcpInfo info = wifi.getDhcpInfo();
+            wifiInfo.put("wifi-dns", intToIp(info.dns1) + ";" + intToIp(info.dns2));
+            wifiInfo.put("wifi-gateway", intToIp(info.gateway));
+            wifiInfo.put("wifi-ip", intToIp(info.ipAddress));
+            wifiInfo.put("wifi-netmask", intToIp(info.netmask));
+            wifiInfo.put("wifi-leaseTime", String.valueOf(info.leaseDuration));
+            wifiInfo.put("wifi-dhcpServer", intToIp(info.serverAddress));
+        }
+        return wifiInfo;
+    }
+
+    public static String intToIp(int addr) {
+        return  ((addr & 0xFF) + "." +
+                ((addr >>>= 8) & 0xFF) + "." +
+                ((addr >>>= 8) & 0xFF) + "." +
+                ((addr >>>= 8) & 0xFF));
+    }
+
+    public static String getLocalDns(String dns) {
+        Process process = null;
+        String str = "";
+        BufferedReader reader = null;
+        try {
+            process = Runtime.getRuntime().exec("getprop net." + dns);
+            reader = new BufferedReader(new InputStreamReader(
+                    process.getInputStream()));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                str += line;
+            }
+            reader.close();
+            process.waitFor();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (reader != null) {
+                    reader.close();
+                }
+                process.destroy();
+            } catch (Exception e) {
+            }
+        }
+        return str.trim();
+    }
+
+
+
 }
