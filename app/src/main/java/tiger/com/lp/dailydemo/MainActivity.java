@@ -94,6 +94,10 @@ public class MainActivity extends Activity {
             case R.id.sync:
                 startActivity(new Intent(this, SyncActivity.class));
                 break;
+            case R.id.notification:
+                ARouter.getInstance().build(RouterPathList.ROUTER_NOTIFICATION)
+                        .navigation();
+                break;
         }
     }
 

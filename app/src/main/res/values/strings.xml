@@ -10,4 +10,9 @@
     <string name="appId">3103509808</string>
     <string name="appKey">AKFBTZ52D49R</string>
     <string name="server_url">http://www.baidu.com</string>
+
+    <string name="pull_to_refresh_pull_label">下拉刷新页面</string>
+    <string name="pull_to_refresh_release_label">松开刷新页面</string>
+    <string name="pull_to_refresh_refreshing_label">刷新中，请稍候...</string>
+    <string name="init_mm">处理中，请稍候···</string>
 </resources>

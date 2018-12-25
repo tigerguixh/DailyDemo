@@ -74,6 +74,7 @@
             </intent-filter>-->
         </activity>
         <activity android:name=".ui.SyncActivity" />
+        <activity android:name=".ui.NotificationActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

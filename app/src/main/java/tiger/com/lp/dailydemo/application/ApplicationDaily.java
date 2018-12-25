@@ -12,9 +12,13 @@ import com.alibaba.android.arouter.launcher.ARouter;
  * @Description :
  */
 public class ApplicationDaily extends Application{
+    public static ApplicationDaily globalContext;
+
     @Override
     public void onCreate() {
         super.onCreate();
+
+        globalContext = this;
 
         if (BuildConfig.DEBUG) {           // 这两行必须写在init之前，否则这些配置在init过程中将无效
         }

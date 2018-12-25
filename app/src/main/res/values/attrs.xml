@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PullToRefresh">
+        <attr name="adapterViewBackground" format="reference|color" />
+        <attr name="headerBackground" format="reference|color" />
+        <attr name="headerTextColor" format="color" />
+        <attr name="mode">
+            <flag name="pullDownFromTop" value="0x1" />
+            <flag name="pullUpFromBottom" value="0x2" />
+            <flag name="both" value="0x3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="folderView">
+        <attr name="viewWidth" format="dimension" />
+        <attr name="viewHeight" format="dimension" />
+        <attr name="viewMarginLeft" format="dimension" />
+        <attr name="viewMarginTop" format="dimension" />
+        <attr name="itemWidth" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="itemMarginLeft" format="dimension" />
+        <attr name="itemMarginTop" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+    
+    <declare-styleable name="SlidingMenu">
+        <attr name="slidingMode">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="viewAbove" format="reference" />
+        <attr name="viewBehind" format="reference" />
+        <attr name="behindOffset" format="dimension" />
+        <attr name="behindWidth" format="dimension" />
+        <attr name="behindScrollScale" format="float" />
+        <attr name="touchModeAbove">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="touchModeBehind">
+            <enum name="margin" value="0" />
+            <enum name="fullscreen" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="shadowDrawable" format="reference" />
+        <attr name="shadowWidth" format="dimension" />
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="fadeDegree" format="float" />
+        <attr name="selectorEnabled" format="boolean" />
+        <attr name="selectorDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PtrFrameLayout">
+        <!-- Optional. If you put header and content in xml, you can you these to specify them. -->
+        <attr name="ptr_header" format="reference" />
+        <attr name="ptr_content" format="reference" />
+
+        <!-- the resistance when you are moving the frame -->
+        <attr name="ptr_resistance" format="float" />
+
+        <!-- the ration of the height of the header to trigger refresh -->
+        <attr name="ptr_ratio_of_header_height_to_refresh" format="float" />
+
+        <attr name="ptr_duration_to_close" format="integer" />
+        <attr name="ptr_duration_to_close_header" format="integer" />
+
+        <!-- pull to refresh, otherwise release to refresh, default is release to refresh -->
+        <attr name="ptr_pull_to_fresh" format="boolean" />
+
+        <!-- keep header when refreshing-->
+        <attr name="ptr_keep_header_when_refresh" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PtrClassicHeader">
+        <attr name="ptr_rotate_ani_time" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="layout_expandable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="Progress_Button">
+        <attr name="pb_text_size" format="dimension" />
+        <attr name="pb_radius" format="dimension" />
+        <attr name="pb_border_width" format="dimension" />
+        <attr name="pb_padding" format="dimension" />
+        <attr name="pb_text_color" format="color" />
+        <attr name="pb_disable_color" format="color" />
+        <attr name="pb_gradient_start_color" format="color"/>
+        <attr name="pb_gradient_end_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="TDStatusView">
+        <attr name="tl_text_size" format="dimension" />
+        <attr name="tl_sub_text_size" format="dimension" />
+        <attr name="tl_text_color" format="color" />
+        <attr name="tl_sub_text_color" format="color" />
+        <attr name="tl_space" format="dimension" />
+        <attr name="tl_sub_space" format="dimension" />
+        <attr name="tl_contain_input_box" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TaduTabStrip">
+        <attr name="tdts_color" format="color"/>
+        <attr name="tdts_bg_color" format="color"/>
+        <attr name="tdts_size" format="dimension"/>
+        <attr name="tdts_weight" format="dimension"/>
+        <attr name="tdts_strip_height" format="dimension"/>
+        <attr name="tdts_factor" format="float"/>
+        <attr name="tdts_padding" format="dimension"/>
+        <attr name="tdts_titles" format="reference"/>
+        <attr name="tdts_typeface" format="string"/>
+        <attr name="tdts_corners_radius" format="dimension"/>
+        <attr name="tdts_animation_duration" format="integer"/>
+        <attr name="tdts_inactive_color" format="color"/>
+        <attr name="tdts_active_color" format="color"/>
+        <attr name="tdts_size_increment" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorPressed" format="color"/>
+        <attr name="fab_colorDisabled" format="color"/>
+        <attr name="fab_colorBorder" format="color"/>
+        <attr name="fab_colorNormal" format="color"/>
+        <attr name="fab_icon" format="reference"/>
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="mini" value="1"/>
+        </attr>
+        <attr name="fab_title" format="string"/>
+        <attr name="fab_stroke_visible" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="AddFloatingActionButton">
+        <attr name="fab_plusIconColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="FloatingActionsMenu">
+        <attr name="fab_addButtonColorPressed" format="color"/>
+        <attr name="fab_addButtonColorNormal" format="color"/>
+        <attr name="fab_addButtonSize" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="mini" value="1"/>
+        </attr>
+        <attr name="fab_addButtonStrokeVisible" format="boolean"/>
+        <attr name="fab_labelStyle" format="reference"/>
+        <attr name="fab_labelsPosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+        <attr name="fab_expandDirection" format="enum">
+            <enum name="up" value="0"/>
+            <enum name="down" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="Category_Layout">
+        <attr name="category_headheight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TDToolbarView">
+        <attr name="toolbar_model" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="browser" value="1"/>
+            <enum name="download" value="2"/>
+        </attr>
+        <attr name="toolbar_menu_name" format="string"/>
+        <attr name="toolbar_title_name" format="string"/>
+        <attr name="toolbar_title_color" format="color"/>
+        <attr name="toolbar_has_divider" format="boolean" />
+        <attr name="toolbar_background_color" format="color" />
+        <attr name="toolbar_icon_back" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="TDDayNightView">
+        <attr name="day_night_view_radius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension"/>
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference"/>
+        <attr name="shadow_right" format="reference"/>
+        <attr name="shadow_bottom" format="reference"/>
+    </declare-styleable>
+
+    <attr name="SwipeBackLayoutStyle" format="reference"/>
+
+    <declare-styleable name="SlidingTabLayout">
+        <attr name="selected_text_size" format="dimension"/>
+        <attr name="selected" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TdRefreshWebView">
+        <attr name="refresh" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomShapeImageView">
+        <attr name="shape" format="integer">
+            <enum name="circle" value="1" />
+            <enum name="rectangle" value="2" />
+            <enum name="arc" value="3" />
+        </attr>
+        <attr name="imageBorderWidth" format="dimension" />
+        <attr name="borderColor" format="color" />
+        <attr name="roundRadius" format="dimension" />
+        <attr name="leftTopRadius" format="dimension" />
+        <attr name="rightTopRadius" format="dimension" />
+        <attr name="rightBottomRadius" format="dimension" />
+        <attr name="leftBottomRadius" format="dimension" />
+        <attr name="onlyDrawBorder" format="boolean" />
+    </declare-styleable>
+
+</resources>

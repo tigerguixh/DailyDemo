@@ -2,8 +2,18 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     defaultConfig {
         multiDexEnabled true
         applicationId "tiger.com.lp.dailydemo"
@@ -49,6 +59,10 @@ android {
         maven {
             url "https://jitpack.io"
         }
+
+        flatDir {
+            dirs'libs'
+        }
     }
 
     // 此处设置不同包名的apk信息
@@ -75,6 +89,9 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    /*androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })*/
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile files('libs/achartengine-1.1.0.jar')
     compile 'com.github.bumptech.glide:glide:4.6.0'
@@ -90,6 +107,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.0.7'
+
+    //compile(name: 'open_ad_sdk', ext: 'aar')
+    //compile "pl.droidsonroids.gif:android-gif-drawable:1.2.6"
 }
 repositories {
     mavenCentral()
