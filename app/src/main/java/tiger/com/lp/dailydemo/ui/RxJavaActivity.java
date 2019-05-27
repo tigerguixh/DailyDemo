@@ -139,7 +139,7 @@ public class RxJavaActivity extends Activity{
 
     // interval 定时执行
     private void interval() {
-        Observable.interval(3, 1, TimeUnit.SECONDS)
+        Observable.interval(3, 30, TimeUnit.SECONDS)
                 .subscribe(observer);
 
         intervalRange();
