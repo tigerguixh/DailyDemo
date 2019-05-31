@@ -12,6 +12,23 @@ open class Base(p : Int) {
     open fun make() {
         println("$per 我是超类.")
     }
+
+    override fun toString(): String {
+        return "Base(per=$per)"
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other !is Base) return false
+
+        if (per != other.per) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return per
+    }
 }
 
 class SuperDaily(p : Int, age : Int) : Base(p) {
