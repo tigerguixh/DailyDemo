@@ -6,10 +6,10 @@ package tiger.com.lp.dailydemo.kotlin
  * @date : 2019/5/28
  * @Description :
  */
-data class User(val name: String = "", val age: Int = 0)
+data class Usersss(val name: String = "", val age: Int = 0)
 
 fun main(args : Array<String>) {
-    val jane = User("Jane", 35)
+    val jane = Usersss("Jane", 35)
     val (name, age) = jane
     println("$name, $age years of age") // 输出 "Jane, 35 years of age"
 }
