@@ -98,6 +98,10 @@ public class MainActivity extends Activity {
                 ARouter.getInstance().build(RouterPathList.ROUTER_NOTIFICATION)
                         .navigation();
                 break;
+            case R.id.hook:
+                ARouter.getInstance().build(RouterPathList.ROUTER_HOOK)
+                        .navigation();
+                break;
         }
     }
 
