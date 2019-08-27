@@ -28,5 +28,5 @@ public class ProtoTypeDemo {
 
         resume1.display();
         resume2.display();
-    }// main
+    }// girl
 }

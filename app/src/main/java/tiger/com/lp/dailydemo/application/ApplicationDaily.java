@@ -5,6 +5,8 @@ import android.app.Application;
 import com.alibaba.android.arouter.BuildConfig;
 import com.alibaba.android.arouter.launcher.ARouter;
 
+import tiger.com.lp.dailydemo.component.skin.SkinEngine;
+
 /**
  * @author : Xunhu.gui
  * @Email : xunhu.gui@tadu.com
@@ -17,6 +19,9 @@ public class ApplicationDaily extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
+
+        //初始化换肤引擎
+        SkinEngine.getInstance().init(this);
 
         globalContext = this;
 

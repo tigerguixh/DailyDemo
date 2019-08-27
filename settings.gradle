@@ -1,1 +1,1 @@
-include ':app', ':ico-annotation', ':ioc-compiler', ':ioc-api', ':ioc-apu'
+include ':app', ':ico-annotation', ':ioc-compiler', ':ioc-api', ':ioc-apu', ':skin_plugin'

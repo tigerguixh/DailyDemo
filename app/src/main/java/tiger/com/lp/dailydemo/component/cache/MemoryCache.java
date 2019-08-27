@@ -1,4 +1,4 @@
-package tiger.com.lp.dailydemo.component;
+package tiger.com.lp.dailydemo.component.cache;
 
 import android.graphics.Bitmap;
 import android.util.LruCache;

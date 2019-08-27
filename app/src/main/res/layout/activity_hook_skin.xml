@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    app:isSupport="true"
+    tools:context=".MainActivity">
+
+    <!--TODO: 关键技术点2 isSupport=true标识当前控件支持换肤-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="14dp"
+        android:text="Hello World!"
+        android:textColor="@color/colorAccent"
+        app:isSupport="true" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/textView"
+        android:text="换肤"
+        android:textColor="@color/colorPrimaryDark"
+        app:isSupport="true" />
+    <!--TODO: 关键技术点2 可以支持自定义View -->
+    <View
+        android:id="@+id/zeroView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/girl"
+        android:layout_below="@+id/button"
+        app:isSupport="true" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/zeroView"
+        android:text="to Activity2"/>
+
+</RelativeLayout>

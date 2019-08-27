@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/ioc-api/ioc-api.iml" filepath="$PROJECT_DIR$/ioc-api/ioc-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/ioc-apu/ioc-apu.iml" filepath="$PROJECT_DIR$/ioc-apu/ioc-apu.iml" />
       <module fileurl="file://$PROJECT_DIR$/ioc-compiler/ioc-compiler.iml" filepath="$PROJECT_DIR$/ioc-compiler/ioc-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/skin_plugin/skin_plugin.iml" filepath="$PROJECT_DIR$/skin_plugin/skin_plugin.iml" />
     </modules>
   </component>
 </project>

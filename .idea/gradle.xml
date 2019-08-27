@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/ioc-api" />
             <option value="$PROJECT_DIR$/ioc-apu" />
             <option value="$PROJECT_DIR$/ioc-compiler" />
+            <option value="$PROJECT_DIR$/skin_plugin" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

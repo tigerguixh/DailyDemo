@@ -102,6 +102,10 @@ public class MainActivity extends Activity {
                 ARouter.getInstance().build(RouterPathList.ROUTER_HOOK)
                         .navigation();
                 break;
+            case R.id.hook_skin:
+                ARouter.getInstance().build(RouterPathList.ROUTER_HOOK_SKIN)
+                        .navigation();
+                break;
         }
     }
 

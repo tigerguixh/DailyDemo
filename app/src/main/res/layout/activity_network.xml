@@ -151,7 +151,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentStart="true"
-                app:srcCompat="@drawable/main" />
+                app:srcCompat="@drawable/girl" />
 
 
             <ImageView

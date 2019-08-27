@@ -14,6 +14,7 @@ public class RouterPathList {
     public static final String ROUTER_STATUE = "/test/statue";
     public static final String ROUTER_NOTIFICATION = "/test/notification";
     public static final String ROUTER_HOOK = "/test/hook";
+    public static final String ROUTER_HOOK_SKIN = "/test/hook/skin";
 
     public static final String ROUTER_JSON = "/service/json";
 }

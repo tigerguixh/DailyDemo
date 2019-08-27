@@ -61,6 +61,7 @@
         <activity android:name=".ui.LoginActivity" />
         <activity android:name=".ui.StatueActivity" />
         <activity android:name=".ui.HookActivity" />
+        <activity android:name=".ui.HookSkinActivity" />
         <activity android:name=".ui.SchameFilterActivity">
             <!--&lt;!&ndash; Schame &ndash;&gt;
             <intent-filter>
