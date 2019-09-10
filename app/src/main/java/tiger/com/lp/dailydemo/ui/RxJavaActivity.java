@@ -2,11 +2,18 @@ package tiger.com.lp.dailydemo.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
+import android.text.format.DateUtils;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
@@ -17,6 +24,7 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
 import tiger.com.lp.dailydemo.utils.LogUtils;
 
@@ -135,6 +143,43 @@ public class RxJavaActivity extends Activity{
                 .subscribe(observer);
 
         interval();
+
+        Observable.timer(3, TimeUnit.MILLISECONDS)
+                .subscribeOn(Schedulers.io())
+                .doOnNext(aLong -> {
+                    LogUtils.e("Time: ", "observer-->");
+                }).subscribe();
+        Handler handler = new Handler(Looper.getMainLooper());
+
+        handler.postDelayed(() -> {
+            LogUtils.e("Time: ", "handle-->" + getCurrentDateTimeWithSS(System.currentTimeMillis()));
+        }, 3 * 60 * 1000);
+
+        CountDownTimer mTimer = new CountDownTimer(3 * DateUtils.MINUTE_IN_MILLIS, DateUtils.MINUTE_IN_MILLIS) {
+            @Override
+            public void onTick(long l) {
+            }
+
+            @Override
+            public void onFinish() {
+                LogUtils.e("Time: ", "CountDownTimer-->" + getCurrentDateTimeWithSS(System.currentTimeMillis()));
+            }
+        };
+        mTimer.start();
+
+        LogUtils.e("Time: ", getCurrentDateTimeWithSS(System.currentTimeMillis()));
+
+        LogUtils.e("Time: realTime", "" + SystemClock.elapsedRealtime());
+    }
+
+    /**
+     * 获得当前日期和时间 格式yyyy-MM-dd HH:mm:ss:SS
+     */
+    public static String getCurrentDateTimeWithSS(long time) {
+        Date date = new Date(time);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SS");
+        String current_time = sdf.format(date);
+        return current_time;
     }
 
     // interval 定时执行
