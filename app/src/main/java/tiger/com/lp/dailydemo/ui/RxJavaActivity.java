@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Message;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.text.format.DateUtils;
+import android.view.View;
+import android.widget.Button;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 
@@ -23,8 +26,10 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import tiger.com.lp.dailydemo.R;
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
 import tiger.com.lp.dailydemo.utils.LogUtils;
 
@@ -36,10 +41,14 @@ import tiger.com.lp.dailydemo.utils.LogUtils;
  */
 @Route(path = RouterPathList.ROUTER_RXJAVA)
 public class RxJavaActivity extends Activity{
+    private Button button;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_hook);
 
+        button = findViewById(R.id.hook);
         rxjava();
     }
 
@@ -144,32 +153,40 @@ public class RxJavaActivity extends Activity{
 
         interval();
 
-        Observable.timer(3, TimeUnit.MILLISECONDS)
+        Observable.timer(20, TimeUnit.SECONDS)
                 .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .doOnNext(aLong -> {
+                    button.setText("Time observer.");
                     LogUtils.e("Time: ", "observer-->");
                 }).subscribe();
         Handler handler = new Handler(Looper.getMainLooper());
 
-        handler.postDelayed(() -> {
+        handler.postAtTime(() -> {
             LogUtils.e("Time: ", "handle-->" + getCurrentDateTimeWithSS(System.currentTimeMillis()));
-        }, 3 * 60 * 1000);
+        }, SystemClock.elapsedRealtime() + 60 * 1000);
 
-        CountDownTimer mTimer = new CountDownTimer(3 * DateUtils.MINUTE_IN_MILLIS, DateUtils.MINUTE_IN_MILLIS) {
+        CountDownTimer mTimer = new CountDownTimer(1 * DateUtils.MINUTE_IN_MILLIS, DateUtils.MINUTE_IN_MILLIS) {
             @Override
             public void onTick(long l) {
             }
 
             @Override
             public void onFinish() {
+                button.setText("Time update.");
                 LogUtils.e("Time: ", "CountDownTimer-->" + getCurrentDateTimeWithSS(System.currentTimeMillis()));
             }
         };
         mTimer.start();
 
-        LogUtils.e("Time: ", getCurrentDateTimeWithSS(System.currentTimeMillis()));
+        LogUtils.e("Time: ", SystemClock.uptimeMillis() + "");
 
         LogUtils.e("Time: realTime", "" + SystemClock.elapsedRealtime());
+    }
+
+    private static Message getPostMessage(Runnable r) {
+        Message m = Message.obtain();
+        return m;
     }
 
     /**
