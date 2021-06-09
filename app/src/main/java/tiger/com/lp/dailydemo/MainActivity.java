@@ -15,6 +15,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
 import tiger.com.lp.dailydemo.ui.AnimatorActivity;
+import tiger.com.lp.dailydemo.ui.DeepLinkActivity;
 import tiger.com.lp.dailydemo.ui.FloatingButtonActivity;
 import tiger.com.lp.dailydemo.ui.ImageActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
@@ -105,6 +106,9 @@ public class MainActivity extends Activity {
             case R.id.hook_skin:
                 ARouter.getInstance().build(RouterPathList.ROUTER_HOOK_SKIN)
                         .navigation();
+                break;
+            case R.id.deeplink:
+                startActivity(new Intent(this, DeepLinkActivity.class));
                 break;
         }
     }

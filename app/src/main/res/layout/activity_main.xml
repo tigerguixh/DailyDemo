@@ -141,5 +141,12 @@
             android:onClick="onButtonClick"
             android:text="Hook换肤" />
 
+        <Button
+            android:id="@+id/deeplink"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="deepLink" />
+
     </LinearLayout>
 </ScrollView>
