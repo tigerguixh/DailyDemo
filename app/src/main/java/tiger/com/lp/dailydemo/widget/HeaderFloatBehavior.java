@@ -3,9 +3,10 @@ package tiger.com.lp.dailydemo.widget;
 import android.animation.ArgbEvaluator;
 import android.content.Context;
 import android.content.res.Resources;
-import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import java.lang.ref.WeakReference;
 

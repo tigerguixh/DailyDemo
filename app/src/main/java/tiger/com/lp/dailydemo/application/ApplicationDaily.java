@@ -2,12 +2,10 @@ package tiger.com.lp.dailydemo.application;
 
 import android.app.Application;
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.alibaba.android.arouter.BuildConfig;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.bun.miitmdid.core.JLibrary;
-import com.bun.miitmdid.core.MdidSdkHelper;
 
 import tiger.com.lp.dailydemo.component.skin.SkinEngine;
 import tiger.com.lp.dailydemo.utils.LogUtils;

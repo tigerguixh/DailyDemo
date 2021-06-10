@@ -2,10 +2,11 @@ package tiger.com.lp.dailydemo.ui;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.text.util.Linkify;
 import android.util.Patterns;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import java.util.regex.Pattern;
 

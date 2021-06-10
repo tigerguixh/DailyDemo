@@ -1,10 +1,7 @@
 package tiger.com.lp.dailydemo.utils;
 
-import android.support.annotation.NonNull;
 
-import com.stealthcopter.networktools.ping.PingResult;
-import com.stealthcopter.networktools.ping.PingStats;
-import com.stealthcopter.networktools.ping.PingTools;
+import androidx.annotation.NonNull;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -72,52 +69,5 @@ public class PingUtils {
 
     public void cancel() {
         this.cancelled = true;
-    }
-
-    public PingStats doPing() {
-        long pingsCompleted = 0L;
-        long noLostPackets = 0L;
-        float totalPingTime = 0.0F;
-        float minPingTime = -1.0F;
-        float maxPingTime = -1.0F;
-        cancelled = false;
-        int noPings = times;
-
-        while (noPings > 0 || times == 0) {
-            PingResult pingResult = PingTools.doPing(PingUtils.this.address, timeOutMillis);
-            ++pingsCompleted;
-            if (pingResult.hasError()) {
-                ++noLostPackets;
-            } else {
-                float timeTaken = pingResult.getTimeTaken();
-                totalPingTime += timeTaken;
-                if (maxPingTime == -1.0F || timeTaken > maxPingTime) {
-                    maxPingTime = timeTaken;
-                }
-
-                if (minPingTime == -1.0F || timeTaken < minPingTime) {
-                    minPingTime = timeTaken;
-                }
-            }
-
-            --noPings;
-            if (cancelled) {
-                break;
-            }
-
-            try {
-                Thread.sleep((long) delayBetweenScansMillis);
-            } catch (InterruptedException var11) {
-                var11.printStackTrace();
-            }
-        }
-
-        return new PingStats(address, pingsCompleted, noLostPackets, totalPingTime, minPingTime, maxPingTime);
-    }
-
-    public interface PingListener {
-        void onResult(PingResult var1);
-
-        void onFinished(PingStats var1);
     }
 }

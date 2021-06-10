@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DailyDemo.iml" filepath="$PROJECT_DIR$/DailyDemo.iml" group="DailyDemo" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="DailyDemo/app" />
-      <module fileurl="file://$PROJECT_DIR$/ico-annotation/ico-annotation.iml" filepath="$PROJECT_DIR$/ico-annotation/ico-annotation.iml" group="DailyDemo/ico-annotation" />
-      <module fileurl="file://$PROJECT_DIR$/ioc-api/ioc-api.iml" filepath="$PROJECT_DIR$/ioc-api/ioc-api.iml" group="DailyDemo/ioc-api" />
-      <module fileurl="file://$PROJECT_DIR$/ioc-apu/ioc-apu.iml" filepath="$PROJECT_DIR$/ioc-apu/ioc-apu.iml" group="DailyDemo/ioc-apu" />
-      <module fileurl="file://$PROJECT_DIR$/ioc-compiler/ioc-compiler.iml" filepath="$PROJECT_DIR$/ioc-compiler/ioc-compiler.iml" group="DailyDemo/ioc-compiler" />
-      <module fileurl="file://$PROJECT_DIR$/skin_plugin/skin_plugin.iml" filepath="$PROJECT_DIR$/skin_plugin/skin_plugin.iml" group="DailyDemo/skin_plugin" />
+      <module fileurl="file://$PROJECT_DIR$/DailyDemo.iml" filepath="$PROJECT_DIR$/DailyDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DailyDemo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DailyDemo.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ico-annotation/DailyDemo.ico-annotation.iml" filepath="$PROJECT_DIR$/.idea/modules/ico-annotation/DailyDemo.ico-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ioc-api/DailyDemo.ioc-api.iml" filepath="$PROJECT_DIR$/.idea/modules/ioc-api/DailyDemo.ioc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ioc-apu/DailyDemo.ioc-apu.iml" filepath="$PROJECT_DIR$/.idea/modules/ioc-apu/DailyDemo.ioc-apu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ioc-compiler/DailyDemo.ioc-compiler.iml" filepath="$PROJECT_DIR$/.idea/modules/ioc-compiler/DailyDemo.ioc-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skin_plugin/DailyDemo.skin_plugin.iml" filepath="$PROJECT_DIR$/.idea/modules/skin_plugin/DailyDemo.skin_plugin.iml" />
     </modules>
   </component>
 </project>
