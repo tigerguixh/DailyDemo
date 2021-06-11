@@ -78,6 +78,7 @@
         <activity android:name=".ui.SyncActivity" />
         <activity android:name=".ui.NotificationActivity" />
         <activity android:name=".ui.DeepLinkActivity" />
+        <activity android:name=".ui.ConstraintLayoutActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

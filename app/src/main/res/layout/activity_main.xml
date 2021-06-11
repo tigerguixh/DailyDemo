@@ -148,5 +148,12 @@
             android:onClick="onButtonClick"
             android:text="deepLink" />
 
+        <Button
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="constraint" />
+
     </LinearLayout>
 </ScrollView>

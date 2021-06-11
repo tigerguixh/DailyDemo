@@ -12,6 +12,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
 import tiger.com.lp.dailydemo.ui.AnimatorActivity;
+import tiger.com.lp.dailydemo.ui.ConstraintLayoutActivity;
 import tiger.com.lp.dailydemo.ui.DeepLinkActivity;
 import tiger.com.lp.dailydemo.ui.FloatingButtonActivity;
 import tiger.com.lp.dailydemo.ui.ImageActivity;
@@ -106,6 +107,11 @@ public class MainActivity extends Activity {
                 break;
             case R.id.deeplink:
                 startActivity(new Intent(this, DeepLinkActivity.class));
+                break;
+            case R.id.constraint:
+                /*ARouter.getInstance().build(RouterPathList.ROUTER_CONSTRAINT)
+                        .navigation();*/
+                startActivity(new Intent(this, ConstraintLayoutActivity.class));
                 break;
         }
     }

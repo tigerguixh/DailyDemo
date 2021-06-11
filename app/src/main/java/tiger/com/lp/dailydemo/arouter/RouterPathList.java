@@ -17,4 +17,5 @@ public class RouterPathList {
     public static final String ROUTER_HOOK_SKIN = "/test/hook/skin";
 
     public static final String ROUTER_JSON = "/service/json";
+    public static final String ROUTER_CONSTRAINT = "/test/constraint";
 }
