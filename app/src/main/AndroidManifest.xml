@@ -79,6 +79,7 @@
         <activity android:name=".ui.NotificationActivity" />
         <activity android:name=".ui.DeepLinkActivity" />
         <activity android:name=".ui.ConstraintLayoutActivity" />
+        <activity android:name=".ui.ViewModelActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

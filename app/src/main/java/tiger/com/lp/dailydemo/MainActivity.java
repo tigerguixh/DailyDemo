@@ -8,7 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+
 import com.alibaba.android.arouter.launcher.ARouter;
+
+import java.util.TimerTask;
 
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
 import tiger.com.lp.dailydemo.ui.AnimatorActivity;
@@ -25,6 +31,9 @@ import tiger.com.lp.dailydemo.ui.ScrollingActivity;
 import tiger.com.lp.dailydemo.ui.SignalActivity;
 import tiger.com.lp.dailydemo.ui.SyncActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
+import tiger.com.lp.dailydemo.ui.ViewModelActivity;
+import tiger.com.lp.dailydemo.viewmodel.TimeViewModel;
+import tiger.com.lp.dailydemo.viewmodel.TimeWithLiveDataViewModel;
 
 public class MainActivity extends Activity {
 
@@ -112,6 +121,9 @@ public class MainActivity extends Activity {
                 /*ARouter.getInstance().build(RouterPathList.ROUTER_CONSTRAINT)
                         .navigation();*/
                 startActivity(new Intent(this, ConstraintLayoutActivity.class));
+                break;
+            case R.id.view_model:
+                startActivity(new Intent(this, ViewModelActivity.class));
                 break;
         }
     }

@@ -155,5 +155,12 @@
             android:onClick="onButtonClick"
             android:text="constraint" />
 
+        <Button
+            android:id="@+id/view_model"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="viewModel" />
+
     </LinearLayout>
 </ScrollView>

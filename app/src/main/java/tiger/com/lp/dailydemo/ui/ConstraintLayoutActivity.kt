@@ -1,7 +1,7 @@
 package tiger.com.lp.dailydemo.ui
 
-import android.app.Activity
 import android.os.Bundle
+import androidx.fragment.app.FragmentActivity
 import tiger.com.lp.dailydemo.R
 
 /**
@@ -10,7 +10,7 @@ import tiger.com.lp.dailydemo.R
  * @date : 2021/6/10
  * @Description :
  */
-class ConstraintLayoutActivity : Activity() {
+class ConstraintLayoutActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

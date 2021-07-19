@@ -1,13 +1,12 @@
 package tiger.com.lp.dailydemo.ui;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Debug;
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentActivity;
 
 import android.text.format.Formatter;
 import android.util.Log;
@@ -19,7 +18,6 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.List;
 
 import tiger.com.lp.dailydemo.R;
@@ -32,7 +30,7 @@ import tiger.com.lp.dailydemo.utils.LogUtils;
  * @description
  */
 
-public class MemoryActivity extends Activity{
+public class MemoryActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
