@@ -26,7 +26,9 @@ public class ImageActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
 
-        imageView = findViewById(R.id.image);
+        ImageView imageView = findViewById(R.id.image);
+
+
 
         Glide.with(this).load("http://buxingxing.dev.youmiyou.cn/media/reward_centers/original/2018/0314/7d2d120e875236ad78b6784083237862.jpeg").into(imageView);
     }

@@ -48,8 +48,8 @@ class ViewModelActivity: AppCompatActivity() {
         var textView = findViewById<TextView>(R.id.view_model)
         var timeLiveData = ViewModelProvider(this).get(TimeWithLiveDataViewModel::class.java)
         val liveData = timeLiveData.getCurrentSecond()
-        liveData?.observe(this, Observer<Integer?> {
-            second: Integer? -> textView.text = "Time: $second"
+        liveData?.observe(this, Observer<Int?> {
+            second: Int? -> textView.text = "Time: $second"
         })
 
         timeLiveData.startTiming()

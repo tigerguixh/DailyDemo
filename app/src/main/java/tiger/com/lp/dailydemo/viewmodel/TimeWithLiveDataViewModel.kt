@@ -13,9 +13,9 @@ import java.util.*
  * @Description :
  */
 class TimeWithLiveDataViewModel : ViewModel() {
-    var second: MutableLiveData<Integer>? = null
+    var second: MutableLiveData<Int>? = null
 
-    fun getCurrentSecond(): LiveData<Integer>? {
+    fun getCurrentSecond(): LiveData<Int>? {
         if (second == null) {
             second = MutableLiveData()
         }
@@ -38,7 +38,7 @@ class TimeWithLiveDataViewModel : ViewModel() {
             val timerTask: TimerTask = object : TimerTask() {
                 override fun run() {
                     seconds++
-                    second!!.postValue(Integer(seconds))
+                    second!!.postValue(seconds)
                 }
             }
 

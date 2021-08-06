@@ -17,6 +17,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import java.util.TimerTask;
 
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
+import tiger.com.lp.dailydemo.dao.MyDatabase;
 import tiger.com.lp.dailydemo.ui.AnimatorActivity;
 import tiger.com.lp.dailydemo.ui.ConstraintLayoutActivity;
 import tiger.com.lp.dailydemo.ui.DeepLinkActivity;
@@ -27,6 +28,7 @@ import tiger.com.lp.dailydemo.ui.NetworkActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
 import tiger.com.lp.dailydemo.ui.OpenFileActivity;
 import tiger.com.lp.dailydemo.ui.PingActivity;
+import tiger.com.lp.dailydemo.ui.RoomDaoActivity;
 import tiger.com.lp.dailydemo.ui.ScrollingActivity;
 import tiger.com.lp.dailydemo.ui.SignalActivity;
 import tiger.com.lp.dailydemo.ui.SyncActivity;
@@ -124,6 +126,9 @@ public class MainActivity extends Activity {
                 break;
             case R.id.view_model:
                 startActivity(new Intent(this, ViewModelActivity.class));
+                break;
+            case R.id.room_dao:
+                startActivity(new Intent(this, RoomDaoActivity.class));
                 break;
         }
     }

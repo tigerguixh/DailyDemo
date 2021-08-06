@@ -80,6 +80,7 @@
         <activity android:name=".ui.DeepLinkActivity" />
         <activity android:name=".ui.ConstraintLayoutActivity" />
         <activity android:name=".ui.ViewModelActivity" />
+        <activity android:name=".ui.RoomDaoActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

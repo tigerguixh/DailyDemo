@@ -88,6 +88,8 @@ android {
 }
 
 dependencies {
+    def room_version = "2.3.0"
+
     compile fileTree(include: ['*.jar'], dir: 'libs')
     /*androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -108,6 +110,8 @@ dependencies {
     implementation(name: 'miit_mdid_1.0.10', ext: 'aar')
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+    implementation "androidx.room:room-runtime:2.2.2"
+    annotationProcessor "androidx.room:room-compiler:2.2.2"
 
     //compile(name: 'open_ad_sdk', ext: 'aar')
     //compile "pl.droidsonroids.gif:android-gif-drawable:1.2.6"
