@@ -1,5 +1,6 @@
 package tiger.com.lp.dailydemo.dao.impl
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import tiger.com.lp.dailydemo.dao.model.Student
 
@@ -25,4 +26,7 @@ interface StudentDao {
 
     @Query("SELECT * FROM student WHERE id = :id")
     fun getStudentById(id: Int): Student
+
+    @Query("SELECT * FROM student ORDER BY ID DESC")
+    fun getAllUserLive(): LiveData<List<Student?>?>?
 }

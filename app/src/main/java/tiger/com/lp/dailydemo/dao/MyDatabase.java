@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import tiger.com.lp.dailydemo.dao.impl.StudentDao;
@@ -19,9 +20,8 @@ import tiger.com.lp.dailydemo.dao.model.Teacher;
  * @date : 2021/8/5
  * @Description :
  */
-@Database(entities = {Student.class}, version = 1)
-public abstract
-class MyDatabase extends RoomDatabase {
+@Database(entities = {Student.class}, version = 2)
+public abstract class MyDatabase extends RoomDatabase {
     private static final String DATABASE_NAME = "my_db";
 
     private static MyDatabase myDatabase;
@@ -43,10 +43,18 @@ class MyDatabase extends RoomDatabase {
                         }
                     })
                     .allowMainThreadQueries() //允许主线程操作
+                    .addMigrations(migration) //保留原有数据
                     .build();
         }
         return myDatabase;
     }
+
+    static final Migration migration = new Migration(1,2) {
+        @Override
+        public void migrate(@NonNull SupportSQLiteDatabase database) {
+            database.execSQL("ALTER TABLE student ADD COLUMN type INTEGER NOT NULL DEFAULT 1");
+        }
+    };
 
     public abstract StudentDao studentDao();
 }

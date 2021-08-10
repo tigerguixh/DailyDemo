@@ -25,9 +25,10 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [ moduleName : project.getName() ]
-                //includeCompileClasspath true
-                //classNames  = ["com.example.ioc_compiler.IocProcessor"]
+                arguments += [
+                        moduleName : project.getName(),
+                        "room.schemaLocation":"$projectDir/schemas".toString()
+                ]
             }
         }
     }
