@@ -23,6 +23,7 @@ import tiger.com.lp.dailydemo.ui.ConstraintLayoutActivity;
 import tiger.com.lp.dailydemo.ui.DeepLinkActivity;
 import tiger.com.lp.dailydemo.ui.FloatingButtonActivity;
 import tiger.com.lp.dailydemo.ui.ImageActivity;
+import tiger.com.lp.dailydemo.ui.JniActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
 import tiger.com.lp.dailydemo.ui.NetworkActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
@@ -129,6 +130,9 @@ public class MainActivity extends Activity {
                 break;
             case R.id.room_dao:
                 startActivity(new Intent(this, RoomDaoActivity.class));
+                break;
+            case R.id.jni:
+                startActivity(new Intent(this, JniActivity.class));
                 break;
         }
     }

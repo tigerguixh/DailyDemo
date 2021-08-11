@@ -23,6 +23,18 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        ndk {
+            abiFilters 'arm64-v8a','armeabi-v7a','x86','x86_64'
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                //生成多个版本的so文件
+                abiFilters 'arm64-v8a','armeabi-v7a','x86','x86_64'
+            }
+        }
+
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments += [
@@ -32,6 +44,13 @@ android {
             }
         }
     }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"  // 设置所要编写的c源码位置，以及编译后so文件的名字
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -46,6 +65,19 @@ android {
             buildConfigField "String", "API_URL",
                     "\"http://test.example.com/api\""
             buildConfigField "boolean", "LOG_HTTP_CALLS", "true"
+        }
+    }
+
+    sourceSets {
+        main {
+//            manifest.srcFile 'AndroidManifest.xml'
+//            java.srcDirs = ['src']
+//            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src/main/java']
+            renderscript.srcDirs = ['src/main/java']
+//            res.srcDirs = ['res']
+//            assets.srcDirs = ['assets']
+            jniLibs.srcDir(['libs'])
         }
     }
 

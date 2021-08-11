@@ -1,0 +1,9 @@
+# ninja log v5
+0	3276	650369037	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	350d69d23fa8ed0a
+3315	3717	650369038	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libhello.so	d7e8c08820648479
+2	419	650369513	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	350d69d23fa8ed0a
+419	563	650369514	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libhello.so	d7e8c08820648479
+2	796	650370114	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	350d69d23fa8ed0a
+796	966	650370114	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libhello.so	d7e8c08820648479
+2	1818	650379913	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	350d69d23fa8ed0a
+1818	2770	650379914	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libhello.so	d7e8c08820648479

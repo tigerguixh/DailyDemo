@@ -169,5 +169,12 @@
             android:onClick="onButtonClick"
             android:text="roomDao" />
 
+        <Button
+            android:id="@+id/jni"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="jni" />
+
     </LinearLayout>
 </ScrollView>

@@ -1,0 +1,7 @@
+[
+{
+  "directory": "F:/work/github/DailyDemo/app/.cxx/cmake/debug/arm64-v8a",
+  "command": "E:\\Android\\Sdk\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android21 --gcc-toolchain=E:/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot  -Dhello_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles\\hello.dir\\src\\main\\jni\\tiger_com_lp_dailydemo_utils_JniUtils.cpp.o -c F:\\work\\github\\DailyDemo\\app\\src\\main\\jni\\tiger_com_lp_dailydemo_utils_JniUtils.cpp",
+  "file": "F:/work/github/DailyDemo/app/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp"
+}
+]
