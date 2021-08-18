@@ -176,5 +176,12 @@
             android:onClick="onButtonClick"
             android:text="jni" />
 
+        <Button
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="bottom_sheet" />
+
     </LinearLayout>
 </ScrollView>
