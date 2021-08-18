@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "F:\\work\\github\\DailyDemo\\app\\CMakeLists.txt",
+    "E:\\Android\\Sdk\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "E:\\Android\\Sdk\\ndk-bundle\\build\\cmake\\platforms.cmake"
+  ],
+  "cleanCommands": [
+    "E:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64\" clean"
+  ],
+  "buildTargetsCommand": "E:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "hello-Debug-x86_64": {
+      "artifactName": "hello",
+      "buildCommand": "E:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64\" hello",
+      "abi": "x86_64",
+      "output": "F:\\work\\github\\DailyDemo\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\libhello.so",
+      "runtimeFiles": []
+    }
+  }
+}

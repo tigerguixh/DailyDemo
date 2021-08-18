@@ -1,0 +1,5 @@
+# ninja log v5
+0	27	0	clean	24e76a92bd376672
+0	152	0	clean	24e76a92bd376672
+28	743	650464055	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	1e65c519ac3094d7
+745	1316	650464056	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f

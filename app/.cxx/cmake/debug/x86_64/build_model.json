@@ -1,13 +1,13 @@
 {
-  "abi": "ARM64_V8A",
+  "abi": "X86_64",
   "abiPlatformVersion": 19,
   "buildSettings": {
     "environmentVariables": []
   },
   "cmake": {
-    "cmakeArtifactsBaseFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\arm64-v8a",
-    "cmakeServerLogFile": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\arm64-v8a\\cmake_server_log.txt",
-    "cmakeWrappingBaseFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cxx\\debug\\arm64-v8a",
+    "cmakeArtifactsBaseFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64",
+    "cmakeServerLogFile": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64\\cmake_server_log.txt",
+    "cmakeWrappingBaseFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cxx\\debug\\x86_64",
     "effectiveConfiguration": {
       "name": "traditional-android-studio-cmake-environment",
       "description": "Composite reified CMakeSettings configuration",
@@ -15,13 +15,13 @@
       "inheritEnvironments": [
         "ndk"
       ],
-      "buildRoot": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\arm64-v8a",
+      "buildRoot": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64",
       "cmakeToolchain": "E:\\Android\\Sdk\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
       "cmakeExecutable": "E:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\cmake.exe",
       "variables": [
         {
           "name": "CMAKE_FIND_ROOT_PATH",
-          "value": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\prefab\\arm64-v8a\\prefab"
+          "value": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\prefab\\x86_64\\prefab"
         },
         {
           "name": "CMAKE_BUILD_TYPE",
@@ -33,7 +33,7 @@
         },
         {
           "name": "ANDROID_ABI",
-          "value": "arm64-v8a"
+          "value": "x86_64"
         },
         {
           "name": "ANDROID_NDK",
@@ -45,7 +45,7 @@
         },
         {
           "name": "CMAKE_ANDROID_ARCH_ABI",
-          "value": "arm64-v8a"
+          "value": "x86_64"
         },
         {
           "name": "CMAKE_ANDROID_NDK",
@@ -57,7 +57,7 @@
         },
         {
           "name": "CMAKE_LIBRARY_OUTPUT_DIRECTORY",
-          "value": "F:\\work\\github\\DailyDemo\\app\\build\\intermediates\\cmake\\debug\\obj\\arm64-v8a"
+          "value": "F:\\work\\github\\DailyDemo\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64"
         },
         {
           "name": "CMAKE_MAKE_PROGRAM",
@@ -74,14 +74,14 @@
       ]
     }
   },
-  "cxxBuildFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\arm64-v8a",
+  "cxxBuildFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64",
   "info": {
-    "abi": "ARM64_V8A",
+    "abi": "X86_64",
     "bitness": 64,
     "deprecated": false,
     "default": true
   },
-  "originalCxxBuildFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\arm64-v8a",
+  "originalCxxBuildFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64",
   "variant": {
     "buildSystemArgumentList": [],
     "buildTargetSet": [],
@@ -202,5 +202,5 @@
     "prefabDirectory": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\prefab",
     "prefabPackageDirectoryList": []
   },
-  "prefabFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\prefab\\arm64-v8a"
+  "prefabFolder": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\prefab\\x86_64"
 }

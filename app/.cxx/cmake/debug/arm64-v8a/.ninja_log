@@ -7,3 +7,9 @@
 796	966	650370114	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libhello.so	d7e8c08820648479
 2	1818	650379913	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	350d69d23fa8ed0a
 1818	2770	650379914	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libhello.so	d7e8c08820648479
+0	21	0	clean	24e76a92bd376672
+3	2733	650464018	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	350d69d23fa8ed0a
+2734	3225	650464019	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libhello.so	d7e8c08820648479
+0	267	0	clean	24e76a92bd376672
+2	434	650464056	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	350d69d23fa8ed0a
+434	648	650464057	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libhello.so	d7e8c08820648479

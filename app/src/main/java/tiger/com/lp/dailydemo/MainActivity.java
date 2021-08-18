@@ -5,6 +5,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import java.util.TimerTask;
 
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
 import tiger.com.lp.dailydemo.dao.MyDatabase;
+import tiger.com.lp.dailydemo.databinding.ActivityMainBinding;
 import tiger.com.lp.dailydemo.ui.AnimatorActivity;
 import tiger.com.lp.dailydemo.ui.ConstraintLayoutActivity;
 import tiger.com.lp.dailydemo.ui.DeepLinkActivity;
@@ -45,9 +47,9 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         activity = this;
+        setContentView(ActivityMainBinding.inflate(LayoutInflater.from(this)).getRoot());
     }
 
     public void onButtonClick(View view) {

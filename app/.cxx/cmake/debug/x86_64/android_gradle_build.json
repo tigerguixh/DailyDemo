@@ -1,0 +1,43 @@
+{
+  "stringTable": {
+    "0": "F:/work/github/DailyDemo/app/.cxx/cmake/debug/x86_64",
+    "1": "--target=x86_64-none-linux-android21 --gcc-toolchain=E:/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=E:/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dhello_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
+  },
+  "buildFiles": [
+    "F:\\work\\github\\DailyDemo\\app\\CMakeLists.txt",
+    "E:\\Android\\Sdk\\ndk-bundle\\build\\cmake\\android.toolchain.cmake",
+    "E:\\Android\\Sdk\\ndk-bundle\\build\\cmake\\platforms.cmake"
+  ],
+  "cleanCommands": [
+    "E:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64\" clean"
+  ],
+  "buildTargetsCommand": "E:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe  -C \"F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "hello-Debug-x86_64": {
+      "buildCommand": "E:\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\x86_64\" hello",
+      "buildType": "debug",
+      "toolchain": "2023459017",
+      "abi": "x86_64",
+      "artifactName": "hello",
+      "files": [
+        {
+          "src": "F:\\work\\github\\DailyDemo\\app\\src\\main\\jni\\tiger_com_lp_dailydemo_utils_JniUtils.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "F:\\work\\github\\DailyDemo\\app\\build\\intermediates\\cmake\\debug\\obj\\x86_64\\libhello.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "2023459017": {
+      "cppCompilerExecutable": "E:\\Android\\Sdk\\ndk-bundle\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
