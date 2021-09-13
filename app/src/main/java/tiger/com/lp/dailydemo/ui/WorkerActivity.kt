@@ -8,6 +8,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import tiger.com.lp.dailydemo.databinding.ActivityWorkerBinding
 import tiger.com.lp.dailydemo.work.UploadLogWorker
+import java.util.concurrent.TimeUnit
 
 /**
  * @author : Xunhu.gui
@@ -27,10 +28,11 @@ class WorkerActivity : AppCompatActivity() {
         binding!!.uploadLog.setOnClickListener {
 
             var worker = OneTimeWorkRequestBuilder<UploadLogWorker>()
-                    .addTag("uploadLog")
-                    .build()
-            WorkManager.getInstance(this).
-            enqueueUniqueWork("upload", ExistingWorkPolicy.KEEP, worker)
+                .addTag("uploadLog")
+                .setInitialDelay(20000, TimeUnit.MILLISECONDS)
+                .build()
+            WorkManager.getInstance(this)
+                .enqueueUniqueWork("upload", ExistingWorkPolicy.KEEP, worker)
         }
     }
 }

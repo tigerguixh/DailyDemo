@@ -11,7 +11,8 @@ import tiger.com.lp.dailydemo.utils.LogUtils
  * @date : 2021/9/7
  * @Description :
  */
-class UploadLogWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {
+class UploadLogWorker(context: Context, workerParams: WorkerParameters) :
+    Worker(context, workerParams) {
     override fun doWork(): Result {
         LogUtils.i("UploadLogWorker", "upload log success.")
         return Result.success()
