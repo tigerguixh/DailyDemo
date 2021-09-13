@@ -14,6 +14,10 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     defaultConfig {
         multiDexEnabled true
         applicationId "tiger.com.lp.dailydemo"
@@ -45,11 +49,11 @@ android {
         }
     }
 
-    externalNativeBuild {
+    /*externalNativeBuild {
         cmake {
             path "CMakeLists.txt"  // 设置所要编写的c源码位置，以及编译后so文件的名字
         }
-    }
+    }*/
 
     buildTypes {
         release {
@@ -154,6 +158,7 @@ dependencies {
     implementation "androidx.room:room-runtime:2.2.2"
     annotationProcessor "androidx.room:room-compiler:2.2.2"
     implementation 'com.google.android.material:material:1.4.0'
+    implementation "androidx.work:work-runtime-ktx:2.5.0"
 
     //compile(name: 'open_ad_sdk', ext: 'aar')
     //compile "pl.droidsonroids.gif:android-gif-drawable:1.2.6"

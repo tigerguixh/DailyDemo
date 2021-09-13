@@ -38,6 +38,7 @@ import tiger.com.lp.dailydemo.ui.SignalActivity;
 import tiger.com.lp.dailydemo.ui.SyncActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
 import tiger.com.lp.dailydemo.ui.ViewModelActivity;
+import tiger.com.lp.dailydemo.ui.WorkerActivity;
 import tiger.com.lp.dailydemo.viewmodel.TimeViewModel;
 import tiger.com.lp.dailydemo.viewmodel.TimeWithLiveDataViewModel;
 
@@ -139,6 +140,9 @@ public class MainActivity extends Activity {
                 break;
             case R.id.bottom_sheet:
                 startActivity(new Intent(this, BottomSheetActivity.class));
+                break;
+            case R.id.worker:
+                startActivity(new Intent(this, WorkerActivity.class));
                 break;
         }
     }

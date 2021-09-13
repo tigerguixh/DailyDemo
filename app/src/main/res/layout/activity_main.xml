@@ -183,5 +183,12 @@
             android:onClick="onButtonClick"
             android:text="bottom_sheet" />
 
+        <Button
+            android:id="@+id/worker"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="worker" />
+
     </LinearLayout>
 </ScrollView>

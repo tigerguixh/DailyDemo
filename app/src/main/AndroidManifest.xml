@@ -83,6 +83,7 @@
         <activity android:name=".ui.RoomDaoActivity" />
         <activity android:name=".ui.JniActivity" />
         <activity android:name=".ui.BottomSheetActivity" />
+        <activity android:name=".ui.WorkerActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>
