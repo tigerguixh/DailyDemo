@@ -123,9 +123,10 @@ android {
         abortOnError false
     }
 
-    /*dataBinding {
+    dataBinding {
         enabled = true
-    }*/
+    }
+
     viewBinding {
         enabled = true
     }
@@ -159,6 +160,9 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:2.2.2"
     implementation 'com.google.android.material:material:1.4.0'
     implementation "androidx.work:work-runtime-ktx:2.5.0"
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.8.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.8.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
 
     //compile(name: 'open_ad_sdk', ext: 'aar')
     //compile "pl.droidsonroids.gif:android-gif-drawable:1.2.6"
