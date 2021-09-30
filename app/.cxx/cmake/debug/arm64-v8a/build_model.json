@@ -88,9 +88,7 @@
     "implicitBuildTargetSet": [],
     "cFlagsList": [],
     "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
-    "cppFlagsList": [
-      ""
-    ],
+    "cppFlagsList": [],
     "isDebuggableEnabled": true,
     "module": {
       "buildSystem": "CMAKE",
@@ -171,6 +169,7 @@
       "project": {
         "compilerSettingsCacheFolder": "F:\\work\\github\\DailyDemo\\.cxx",
         "cxxFolder": "F:\\work\\github\\DailyDemo\\.cxx",
+        "ideBuildTargetAbi": "arm64-v8a,armeabi-v7a,armeabi",
         "isBuildOnlyTargetAbiEnabled": true,
         "isCmakeBuildCohabitationEnabled": false,
         "isNativeCompilerSettingsCacheEnabled": false,
@@ -194,10 +193,7 @@
     "objFolder": "F:\\work\\github\\DailyDemo\\app\\build\\intermediates\\cmake\\debug\\obj",
     "variantName": "debug",
     "validAbiList": [
-      "ARMEABI_V7A",
-      "ARM64_V8A",
-      "X86",
-      "X86_64"
+      "ARM64_V8A"
     ],
     "prefabDirectory": "F:\\work\\github\\DailyDemo\\app\\.cxx\\cmake\\debug\\prefab",
     "prefabPackageDirectoryList": []

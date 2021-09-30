@@ -39,6 +39,7 @@ import tiger.com.lp.dailydemo.ui.SyncActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
 import tiger.com.lp.dailydemo.ui.ViewModelActivity;
 import tiger.com.lp.dailydemo.ui.WorkerActivity;
+import tiger.com.lp.dailydemo.utils.JniUtils;
 import tiger.com.lp.dailydemo.viewmodel.TimeViewModel;
 import tiger.com.lp.dailydemo.viewmodel.TimeWithLiveDataViewModel;
 

@@ -3,3 +3,6 @@
 0	79	0	clean	24e76a92bd376672
 17	649	650464057	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	9f6cde77c96de781
 651	1191	650464058	../../../../build/intermediates/cmake/debug/obj/x86/libhello.so	937b964b67e928
+0	282	0	clean	24e76a92bd376672
+24	553	654354086	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	9f6cde77c96de781
+553	1192	654354087	../../../../build/intermediates/cmake/debug/obj/x86/libhello.so	937b964b67e928

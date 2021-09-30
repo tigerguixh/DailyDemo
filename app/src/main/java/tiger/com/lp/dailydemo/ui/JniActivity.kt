@@ -15,6 +15,6 @@ class JniActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        LogUtils.e("Jni: ", JniUtils.getJniString())
+        //LogUtils.e("Jni: ", JniUtils.getJniString())
     }
 }

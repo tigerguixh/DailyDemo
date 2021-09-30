@@ -21,6 +21,8 @@ import tiger.com.lp.dailydemo.designpatterns.observer.DemoObserver;
 import tiger.com.lp.dailydemo.designpatterns.observer.ObserverController;
 import tiger.com.lp.dailydemo.designpatterns.observer.concrete.ObserverTextView;
 import tiger.com.lp.dailydemo.designpatterns.observer.concrete.SubjectObsevable;
+import tiger.com.lp.dailydemo.utils.JniUtils;
+import tiger.com.lp.dailydemo.utils.LogUtils;
 
 /**
  * @author gxh
@@ -41,8 +43,16 @@ public class ObserverActivity extends Activity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        String boot = new String(JniUtils.getJniString());
+        String update = new String(JniUtils.getJniString2());
+
+        LogUtils.i("update_time: boot" ,boot);
+        LogUtils.i("update_time: update" ,update);
+
+        // 106216399999995
+
         //ViewInjector.injectView(this);
-        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+        /*findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 activityController.requestRefresh(new Demo("Tiger"));
@@ -65,7 +75,7 @@ public class ObserverActivity extends Activity{
             }
         };
 
-        demoObserver.initialize(activityController);
+        demoObserver.initialize(activityController);*/
 
         //getHost("http://androidapi22.tadu.com");
     }
@@ -87,6 +97,6 @@ public class ObserverActivity extends Activity{
     protected void onDestroy() {
         super.onDestroy();
 
-        demoObserver.unRegisterDemoObserver();
+        //demoObserver.unRegisterDemoObserver();
     }
 }

@@ -3,3 +3,17 @@
 0	152	0	clean	24e76a92bd376672
 28	743	650464055	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	1e65c519ac3094d7
 745	1316	650464056	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f
+0	243	0	clean	24e76a92bd376672
+134	3050	654354081	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	1e65c519ac3094d7
+3050	3742	654354082	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f
+2	370	654354222	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f
+3	149	654354329	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f
+2	317	654354823	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f
+3	548	654355544	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	1e65c519ac3094d7
+548	873	654355545	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f
+3	426	654356574	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	1e65c519ac3094d7
+426	541	654356574	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f
+23	1191	654497876	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	1e65c519ac3094d7
+1192	1670	654497877	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f
+41	1842	654598640	CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o	1e65c519ac3094d7
+1842	2510	654598640	../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libhello.so	8cfda1613dbf142f

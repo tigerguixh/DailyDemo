@@ -11,5 +11,7 @@ public class JniUtils {
         System.loadLibrary("hello");
     }
 
-    public static native String getJniString();
+    public static native char[] getJniString();
+    public static native String getJniString2();
+    public static native int[] getJniString3();
 }

@@ -1,3 +1,2 @@
 ninja: Entering directory `F:\work\github\DailyDemo\app\.cxx\cmake\debug\armeabi-v7a'
-[1/2] Building CXX object CMakeFiles/hello.dir/src/main/jni/tiger_com_lp_dailydemo_utils_JniUtils.cpp.o
-[2/2] Linking CXX shared library ..\..\..\..\build\intermediates\cmake\debug\obj\armeabi-v7a\libhello.so
+ninja: no work to do.
