@@ -28,6 +28,7 @@ import tiger.com.lp.dailydemo.ui.FloatingButtonActivity;
 import tiger.com.lp.dailydemo.ui.ImageActivity;
 import tiger.com.lp.dailydemo.ui.JniActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
+import tiger.com.lp.dailydemo.ui.MvvmActivity;
 import tiger.com.lp.dailydemo.ui.NetworkActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
 import tiger.com.lp.dailydemo.ui.OpenFileActivity;
@@ -144,6 +145,9 @@ public class MainActivity extends Activity {
                 break;
             case R.id.worker:
                 startActivity(new Intent(this, WorkerActivity.class));
+                break;
+            case R.id.mvvm:
+                startActivity(new Intent(this, MvvmActivity.class));
                 break;
         }
     }

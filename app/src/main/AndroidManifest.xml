@@ -84,6 +84,7 @@
         <activity android:name=".ui.JniActivity" />
         <activity android:name=".ui.BottomSheetActivity" />
         <activity android:name=".ui.WorkerActivity" />
+        <activity android:name=".ui.MvvmActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

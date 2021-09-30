@@ -27,5 +27,22 @@ class User {
     @ColumnInfo(name = "followers", typeAffinity = ColumnInfo.INTEGER)
     var followers: Int = 0
 
+    @ColumnInfo(name = "blog", typeAffinity = ColumnInfo.TEXT)
+    var blog: String = ""
 
+    @ColumnInfo(name = "company", typeAffinity = ColumnInfo.TEXT)
+    var company: String = ""
+
+    @ColumnInfo(name = "bio", typeAffinity = ColumnInfo.TEXT)
+    var bio: String = ""
+
+    @ColumnInfo(name = "location", typeAffinity = ColumnInfo.TEXT)
+    var location: String = ""
+
+    @ColumnInfo(name = "htmlUrl", typeAffinity = ColumnInfo.TEXT)
+    var htmlUrl: String = ""
+
+    override fun toString(): String {
+        return "User(id=$id, name='$name', avatar='$avatar', followers=$followers, blog='$blog', company='$company', bio='$bio', location='$location', htmlUrl='$htmlUrl')"
+    }
 }

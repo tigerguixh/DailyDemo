@@ -190,5 +190,12 @@
             android:onClick="onButtonClick"
             android:text="worker" />
 
+        <Button
+            android:id="@+id/mvvm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="mvvm" />
+
     </LinearLayout>
 </ScrollView>

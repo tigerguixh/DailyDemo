@@ -88,9 +88,7 @@
     "implicitBuildTargetSet": [],
     "cFlagsList": [],
     "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
-    "cppFlagsList": [
-      ""
-    ],
+    "cppFlagsList": [],
     "isDebuggableEnabled": true,
     "module": {
       "buildSystem": "CMAKE",
