@@ -64,11 +64,11 @@ android {
         }
     }
 
-    externalNativeBuild {
+    /*externalNativeBuild {
         cmake {
             path "CMakeLists.txt"  // 设置所要编写的c源码位置，以及编译后so文件的名字
         }
-    }
+    }*/
 
     buildTypes {
         release {
