@@ -22,7 +22,6 @@ class RoomDaoActivity : AppCompatActivity(), View.OnClickListener {
     var myDatabase: MyDatabase? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // 测试rebase wwwwwwwwwww
 
         super.onCreate(savedInstanceState)
 
