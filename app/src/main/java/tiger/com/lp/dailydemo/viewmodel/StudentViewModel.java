@@ -23,6 +23,7 @@ public class StudentViewModel extends AndroidViewModel {
     public StudentViewModel(Application application) {
         super(application);
 
+        // 测试
         myDatabase = MyDatabase.getInstance(application);
         listLiveData = myDatabase.studentDao().getAllUserLive();
     }
