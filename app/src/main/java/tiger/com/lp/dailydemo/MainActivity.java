@@ -29,6 +29,7 @@ import tiger.com.lp.dailydemo.ui.DeepLinkActivity;
 import tiger.com.lp.dailydemo.ui.FloatingButtonActivity;
 import tiger.com.lp.dailydemo.ui.ImageActivity;
 import tiger.com.lp.dailydemo.ui.JniActivity;
+import tiger.com.lp.dailydemo.ui.LoginActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
 import tiger.com.lp.dailydemo.ui.MvvmActivity;
 import tiger.com.lp.dailydemo.ui.NetworkActivity;
@@ -150,6 +151,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.mvvm:
                 startActivity(new Intent(this, MvvmActivity.class));
+                break;
+            case R.id.dagger:
+                startActivity(new Intent(this, LoginActivity.class));
                 break;
         }
     }

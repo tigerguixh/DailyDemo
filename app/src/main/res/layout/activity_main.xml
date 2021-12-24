@@ -197,5 +197,11 @@
             android:onClick="onButtonClick"
             android:text="mvvm" />
 
+        <Button
+            android:id="@+id/dagger"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="dagger" />
     </LinearLayout>
 </ScrollView>

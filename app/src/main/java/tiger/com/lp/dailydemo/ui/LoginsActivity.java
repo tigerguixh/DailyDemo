@@ -3,7 +3,7 @@ package tiger.com.lp.dailydemo.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
 
 import android.view.View;
@@ -22,7 +22,7 @@ import tiger.com.lp.dailydemo.designpatterns.state.day3.LoginStatue;
  * @Description :
  */
 @Route(path = RouterPathList.ROUTER_LOGIN)
-public class LoginActivity extends Activity{
+public class LoginsActivity extends Activity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +33,7 @@ public class LoginActivity extends Activity{
             @Override
             public void onClick(View v) {
                 LoginContext.getInstance().setUserStatue(new LoginStatue());
-                startActivity(new Intent(LoginActivity.this, StatueActivity.class));
+                startActivity(new Intent(LoginsActivity.this, StatueActivity.class));
                 finish();
             }
         });

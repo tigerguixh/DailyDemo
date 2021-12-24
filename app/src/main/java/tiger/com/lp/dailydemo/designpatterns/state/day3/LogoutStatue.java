@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
-import tiger.com.lp.dailydemo.ui.LoginActivity;
+import tiger.com.lp.dailydemo.ui.LoginsActivity;
 
 /**
  * @author : Xunhu.gui
@@ -24,7 +24,7 @@ public class LogoutStatue implements UserStatue{
     }
 
     private void gotoLogin(Context context) {
-        context.startActivity(new Intent(context, LoginActivity.class));
+        context.startActivity(new Intent(context, LoginsActivity.class));
         ((Activity) context).finish();
     }
 }
