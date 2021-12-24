@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -17,6 +18,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 
 import java.util.TimerTask;
 
+import dagger.hilt.android.AndroidEntryPoint;
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
 import tiger.com.lp.dailydemo.dao.MyDatabase;
 import tiger.com.lp.dailydemo.databinding.ActivityMainBinding;
@@ -44,7 +46,7 @@ import tiger.com.lp.dailydemo.utils.JniUtils;
 import tiger.com.lp.dailydemo.viewmodel.TimeViewModel;
 import tiger.com.lp.dailydemo.viewmodel.TimeWithLiveDataViewModel;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     public static Activity activity;
 

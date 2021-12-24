@@ -22,7 +22,7 @@ class RoomDaoActivity : AppCompatActivity(), View.OnClickListener {
     var myDatabase: MyDatabase? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        // 我是测试
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_room_dao)
