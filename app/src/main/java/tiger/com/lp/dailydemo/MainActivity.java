@@ -36,6 +36,7 @@ import tiger.com.lp.dailydemo.ui.NetworkActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
 import tiger.com.lp.dailydemo.ui.OpenFileActivity;
 import tiger.com.lp.dailydemo.ui.PingActivity;
+import tiger.com.lp.dailydemo.ui.ReaderActivity;
 import tiger.com.lp.dailydemo.ui.RoomDaoActivity;
 import tiger.com.lp.dailydemo.ui.ScrollingActivity;
 import tiger.com.lp.dailydemo.ui.SignalActivity;
@@ -154,6 +155,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.dagger:
                 startActivity(new Intent(this, LoginActivity.class));
+                break;
+            case R.id.reader:
+                startActivity(new Intent(this, ReaderActivity.class));
                 break;
         }
     }

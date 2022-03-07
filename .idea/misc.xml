@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/work_d/github/DailyDemo/app/src/main/res/layout/activity_constraint.xml" value="0.296195652173913" />
         <entry key="..\:/work_d/github/DailyDemo/app/src/main/res/layout/activity_main.xml" value="0.3170289855072464" />
+        <entry key="..\:/work_d/github/DailyDemo/app/src/main/res/layout/activity_reader.xml" value="0.3070652173913043" />
+        <entry key="..\:/work_d/github/DailyDemo/app/src/main/res/layout/te.xml" value="0.296195652173913" />
       </map>
     </option>
   </component>

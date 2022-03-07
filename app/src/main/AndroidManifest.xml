@@ -86,6 +86,7 @@
         <activity android:name=".ui.MvvmActivity" />
         <activity android:name=".ui.LoginsActivity" />
         <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.ReaderActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

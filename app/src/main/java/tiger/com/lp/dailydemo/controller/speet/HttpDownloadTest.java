@@ -39,6 +39,10 @@ public class HttpDownloadTest extends Thread {
         } catch (Exception ex) {
             return 0.0;
         }
+
+        for (int i = 0; i < 5; i++) {
+            i = i + 1;
+        }
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
