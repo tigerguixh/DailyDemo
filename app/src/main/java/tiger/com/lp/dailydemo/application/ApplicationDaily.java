@@ -1,7 +1,8 @@
 package tiger.com.lp.dailydemo.application;
 
+import android.app.Application;
+
 import androidx.annotation.NonNull;
-import androidx.multidex.MultiDexApplication;
 
 import com.alibaba.android.arouter.BuildConfig;
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -18,7 +19,7 @@ import tiger.com.lp.dailydemo.utils.MiitHelper;
  * @date : 2018/6/1
  * @Description :
  */
-public class ApplicationDaily extends MultiDexApplication implements MiitHelper.AppIdsUpdater {
+public class ApplicationDaily extends Application implements MiitHelper.AppIdsUpdater {
     public static ApplicationDaily globalContext;
     private MiitHelper miitHelper;
     public ApplicationComponent applicationComponent;

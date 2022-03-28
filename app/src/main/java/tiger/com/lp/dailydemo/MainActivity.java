@@ -24,6 +24,7 @@ import tiger.com.lp.dailydemo.dao.MyDatabase;
 import tiger.com.lp.dailydemo.databinding.ActivityMainBinding;
 import tiger.com.lp.dailydemo.ui.AnimatorActivity;
 import tiger.com.lp.dailydemo.ui.BottomSheetActivity;
+import tiger.com.lp.dailydemo.ui.ComposeActivity;
 import tiger.com.lp.dailydemo.ui.ConstraintLayoutActivity;
 import tiger.com.lp.dailydemo.ui.DeepLinkActivity;
 import tiger.com.lp.dailydemo.ui.FloatingButtonActivity;
@@ -158,6 +159,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.reader:
                 startActivity(new Intent(this, ReaderActivity.class));
+                break;
+            case R.id.compose:
+                startActivity(new Intent(this, ComposeActivity.class));
                 break;
         }
     }

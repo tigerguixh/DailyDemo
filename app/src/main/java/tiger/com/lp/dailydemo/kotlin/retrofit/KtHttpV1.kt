@@ -1,20 +1,23 @@
 import com.google.gson.Gson
+import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import retrofit2.http.Field
 import retrofit2.http.GET
+import tiger.com.lp.dailydemo.kotlin.retrofit.api.ApiService
 import java.lang.reflect.Method
 import java.lang.reflect.Proxy
 
 object KtHttpV2 {
 
+    var call: Call? = null
     private val okHttpClient by lazy { OkHttpClient() }
     private val gson by lazy { Gson() }
     var baseUrl = "https://baseurl.com" // 可改成任意url
 
-    inline fun <reified T> create(): T {
+    inline fun <reified T> create(java: Class<ApiService>): T {
         return Proxy.newProxyInstance(
-            T::class.java.classLoader,
+            java.classLoader,
             arrayOf(T::class.java)
         ) { proxy, method, args ->
 
