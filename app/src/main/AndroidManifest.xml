@@ -88,6 +88,7 @@
         <activity android:name=".ui.LoginActivity" />
         <activity android:name=".ui.ReaderActivity" />
         <activity android:name=".ui.ComposeActivity" />
+        <activity android:name=".ui.TrendingActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

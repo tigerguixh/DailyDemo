@@ -43,6 +43,7 @@ import tiger.com.lp.dailydemo.ui.ScrollingActivity;
 import tiger.com.lp.dailydemo.ui.SignalActivity;
 import tiger.com.lp.dailydemo.ui.SyncActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
+import tiger.com.lp.dailydemo.ui.TrendingActivity;
 import tiger.com.lp.dailydemo.ui.ViewModelActivity;
 import tiger.com.lp.dailydemo.ui.WorkerActivity;
 import tiger.com.lp.dailydemo.utils.JniUtils;
@@ -162,6 +163,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.compose:
                 startActivity(new Intent(this, ComposeActivity.class));
+                break;
+            case R.id.trending:
+                startActivity(new Intent(this, TrendingActivity.class));
                 break;
         }
     }

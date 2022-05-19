@@ -217,5 +217,12 @@
             android:layout_height="50dp"
             android:onClick="onButtonClick"
             android:text="compose" />
+
+        <Button
+            android:id="@+id/trending"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="kotlin treading" />
     </LinearLayout>
 </ScrollView>
