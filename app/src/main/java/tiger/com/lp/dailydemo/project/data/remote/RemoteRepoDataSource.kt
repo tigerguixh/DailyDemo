@@ -16,7 +16,7 @@ object RemoteRepoDataSource : RepoDataSource {
                     ResultX.Success(RetrofitClient.service.repos())
                 } catch (e: Exception) {
                     Log.e(TAG, e.message, e)
-                    Error(e)
+                    ResultX.Error(e)
                 }
-            } as ResultX<RepoList>
+            }
 }
