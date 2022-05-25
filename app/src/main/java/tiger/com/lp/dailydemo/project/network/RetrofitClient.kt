@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit
 object RetrofitClient {
 
     private const val TAG = "OkHttp"
-    private const val BASE_URL = "https://baseUrl.com/"
+    private const val BASE_URL = "https://trendings.herokuapp.com/"
     private const val TIME_OUT = 10
 
     /*val moshi: Moshi by lazy {
