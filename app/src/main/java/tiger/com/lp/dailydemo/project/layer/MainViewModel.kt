@@ -27,7 +27,7 @@ class MainViewModel(
                     _repos.value = RepoList()
                 }
                 ResultX.Loading -> {
-                    // 展示Loading
+                    _repos.value = RepoList(status = 1)
                 }
             }
         }

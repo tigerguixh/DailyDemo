@@ -3,7 +3,8 @@ package tiger.com.lp.dailydemo.project.model
 data class RepoList(
         val count: Int = 0,
         val items: List<Repo> = listOf(),
-        val msg: String = "数据为空"
+        val msg: String = "数据为空",
+        val status: Int = 0
 )
 
 data class Repo(

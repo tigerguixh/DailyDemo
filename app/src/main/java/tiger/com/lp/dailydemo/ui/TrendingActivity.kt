@@ -1,6 +1,7 @@
 package tiger.com.lp.dailydemo.ui
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,7 +31,11 @@ class TrendingActivity : AppCompatActivity() {
     private fun observeData() {
         // 3
         viewModel.repos.observe(this) {
-            display(it)
+            if (it.status == 1) {
+                Toast.makeText(this, "Loading", Toast.LENGTH_SHORT).show()
+            } else {
+                display(it)
+            }
         }
     }
 

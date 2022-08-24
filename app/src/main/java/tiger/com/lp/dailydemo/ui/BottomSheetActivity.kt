@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import tiger.com.lp.dailydemo.R
 import tiger.com.lp.dailydemo.databinding.ActivityBottomSheetBinding
+import tiger.com.lp.dailydemo.utils.LogUtils
 
 /**
  * @author : Xunhu.gui
