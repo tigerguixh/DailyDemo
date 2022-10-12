@@ -224,5 +224,12 @@
             android:layout_height="50dp"
             android:onClick="onButtonClick"
             android:text="kotlin treading" />
+
+        <Button
+            android:id="@+id/aidou"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="爱豆" />
     </LinearLayout>
 </ScrollView>

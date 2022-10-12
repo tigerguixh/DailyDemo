@@ -22,6 +22,7 @@ import dagger.hilt.android.AndroidEntryPoint;
 import tiger.com.lp.dailydemo.arouter.RouterPathList;
 import tiger.com.lp.dailydemo.dao.MyDatabase;
 import tiger.com.lp.dailydemo.databinding.ActivityMainBinding;
+import tiger.com.lp.dailydemo.ui.AiDouActivity;
 import tiger.com.lp.dailydemo.ui.AnimatorActivity;
 import tiger.com.lp.dailydemo.ui.BottomSheetActivity;
 import tiger.com.lp.dailydemo.ui.ComposeActivity;
@@ -166,6 +167,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.trending:
                 startActivity(new Intent(this, TrendingActivity.class));
+                break;
+            case R.id.aidou:
+                startActivity(new Intent(this, AiDouActivity.class));
                 break;
         }
     }
