@@ -29,7 +29,7 @@ public class ApplicationDaily extends Application implements MiitHelper.AppIdsUp
         super.onCreate();
 
         miitHelper = new MiitHelper(this);
-        miitHelper.getDeviceIds(this);
+        //miitHelper.getDeviceIds(this);
 
         //初始化换肤引擎
         SkinEngine.getInstance().init(this);

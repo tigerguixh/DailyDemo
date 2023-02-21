@@ -14,6 +14,7 @@ class ConstraintLayoutActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // https://www.jianshu.com/p/41bd5170cde3
         setContentView(R.layout.activity_constraint)
     }
 }

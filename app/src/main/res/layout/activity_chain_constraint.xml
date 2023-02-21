@@ -22,53 +22,44 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!--  宽度设置为wrap_content  -->
         <TextView
             android:id="@+id/A"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="100dp"
-            android:gravity="center"
-            android:text="AAAAAAAAAAAAAAAAAA"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_default="spread" />
-
-        <!--  宽度设置为0dp wrap模式  -->
-        <TextView
-            android:id="@+id/B"
             android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginEnd="100dp"
-            android:gravity="center"
-            android:text="BBBBBBBBBBBBBBBBBBBBBBB"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_default="wrap" />
-
-
-        <TextView
-            android:id="@+id/Ab"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="250dp"
+            android:layout_height="80dp"
             android:gravity="center"
             android:text="A"
             android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintEnd_toStartOf="@id/B"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/B"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="B"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintEnd_toStartOf="@id/C"
+            app:layout_constraintStart_toEndOf="@id/A"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/C"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="C"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/B"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

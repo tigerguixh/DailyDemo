@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,6 +49,7 @@ import tiger.com.lp.dailydemo.ui.TimerActivity;
 import tiger.com.lp.dailydemo.ui.TrendingActivity;
 import tiger.com.lp.dailydemo.ui.ViewModelActivity;
 import tiger.com.lp.dailydemo.ui.WorkerActivity;
+import tiger.com.lp.dailydemo.utils.HookUtils;
 import tiger.com.lp.dailydemo.utils.JniUtils;
 import tiger.com.lp.dailydemo.viewmodel.TimeViewModel;
 import tiger.com.lp.dailydemo.viewmodel.TimeWithLiveDataViewModel;
@@ -169,7 +172,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, TrendingActivity.class));
                 break;
             case R.id.aidou:
-                startActivity(new Intent(this, AiDouActivity.class));
+                //startActivity(new Intent(this, AiDouActivity.class));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("agoo://com.tadu.read/thirdpush")));
                 break;
         }
     }

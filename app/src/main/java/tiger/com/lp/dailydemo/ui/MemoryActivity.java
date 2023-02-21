@@ -21,6 +21,7 @@ import java.io.IOException;
 import java.util.List;
 
 import tiger.com.lp.dailydemo.R;
+import tiger.com.lp.dailydemo.utils.HookUtils;
 import tiger.com.lp.dailydemo.utils.LogUtils;
 
 /**
@@ -37,10 +38,13 @@ public class MemoryActivity extends FragmentActivity {
 
         setContentView(R.layout.activity_memory);
 
+        HookUtils.hookSystem();
+
         findViewById(R.id.memory_kill).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                forceStopAPK(((EditText)findViewById(R.id.process_name)).getText().toString());
+                //forceStopAPK(((EditText)findViewById(R.id.process_name)).getText().toString());
+                HookUtils.getIMEI(MemoryActivity.this);
             }
         });
 

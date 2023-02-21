@@ -21,6 +21,7 @@ import tiger.com.lp.dailydemo.designpatterns.observer.DemoObserver;
 import tiger.com.lp.dailydemo.designpatterns.observer.ObserverController;
 import tiger.com.lp.dailydemo.designpatterns.observer.concrete.ObserverTextView;
 import tiger.com.lp.dailydemo.designpatterns.observer.concrete.SubjectObsevable;
+import tiger.com.lp.dailydemo.utils.HookUtils;
 import tiger.com.lp.dailydemo.utils.JniUtils;
 import tiger.com.lp.dailydemo.utils.LogUtils;
 
