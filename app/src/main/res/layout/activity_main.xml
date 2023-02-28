@@ -231,5 +231,26 @@
             android:layout_height="50dp"
             android:onClick="onButtonClick"
             android:text="爱豆" />
+
+        <Button
+            android:id="@+id/motion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="motion动画" />
+
+        <Button
+            android:id="@+id/motion_slide"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="motion滑动动画" />
+
+        <Button
+            android:id="@+id/canvas"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="canvas画布" />
     </LinearLayout>
 </ScrollView>

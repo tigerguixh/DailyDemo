@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    motion:layoutDuringTransition="ignoreRequest">
+
+    <Transition
+        motion:constraintSetStart="@id/start"
+        motion:constraintSetEnd="@+id/next"
+        motion:duration="100"
+        android:id="@+id/forward">
+        <KeyFrameSet>
+        </KeyFrameSet>
+        <OnSwipe
+            motion:dragDirection="dragLeft"
+            motion:touchAnchorSide="left"
+            motion:maxAcceleration="300"/>
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/previous"
+        motion:duration="100"
+        android:id="@+id/backward">
+
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorSide="right"
+            motion:maxAcceleration="300"/>
+
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/previous">
+
+        <Constraint
+            android:id="@+id/page1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="0.2dp"
+            motion:layout_constraintWidth_default="percent"
+            motion:layout_constraintWidth_percent="1"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toRightOf="@+id/page0"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/page0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="0.2dp"
+            motion:layout_constraintWidth_default="percent"
+            motion:layout_constraintWidth_percent="1"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/page0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="0dp"
+            motion:layout_constraintWidth_default="percent"
+            motion:layout_constraintWidth_percent="1"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintRight_toLeftOf="@+id/page1"
+            />
+        <Constraint
+            android:id="@+id/page1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="0dp"
+            motion:layout_constraintWidth_default="percent"
+            motion:layout_constraintWidth_percent="1"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/page2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="0dp"
+            motion:layout_constraintWidth_default="percent"
+            motion:layout_constraintWidth_percent="1"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintLeft_toRightOf="@+id/page1"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/next">
+
+        <Constraint
+            android:id="@+id/page1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="0dp"
+            motion:layout_constraintWidth_default="percent"
+            motion:layout_constraintWidth_percent="1"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintRight_toLeftOf="@+id/page2"
+            />
+        <Constraint
+            android:id="@+id/page2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="0dp"
+            motion:layout_constraintWidth_default="percent"
+            motion:layout_constraintWidth_percent="1"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+</MotionScene>

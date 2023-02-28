@@ -91,6 +91,9 @@
         <activity android:name=".ui.ComposeActivity" />
         <activity android:name=".ui.TrendingActivity" />
         <activity android:name=".ui.AiDouActivity" />
+        <activity android:name=".ui.MotionActivity" />
+        <activity android:name=".ui.MotionSlideActivity" />
+        <activity android:name=".ui.CanvasActivity" />
 
         <receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>

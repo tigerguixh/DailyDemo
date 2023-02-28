@@ -27,6 +27,7 @@ import tiger.com.lp.dailydemo.databinding.ActivityMainBinding;
 import tiger.com.lp.dailydemo.ui.AiDouActivity;
 import tiger.com.lp.dailydemo.ui.AnimatorActivity;
 import tiger.com.lp.dailydemo.ui.BottomSheetActivity;
+import tiger.com.lp.dailydemo.ui.CanvasActivity;
 import tiger.com.lp.dailydemo.ui.ComposeActivity;
 import tiger.com.lp.dailydemo.ui.ConstraintLayoutActivity;
 import tiger.com.lp.dailydemo.ui.DeepLinkActivity;
@@ -35,6 +36,8 @@ import tiger.com.lp.dailydemo.ui.ImageActivity;
 import tiger.com.lp.dailydemo.ui.JniActivity;
 import tiger.com.lp.dailydemo.ui.LoginActivity;
 import tiger.com.lp.dailydemo.ui.MemoryActivity;
+import tiger.com.lp.dailydemo.ui.MotionActivity;
+import tiger.com.lp.dailydemo.ui.MotionSlideActivity;
 import tiger.com.lp.dailydemo.ui.MvvmActivity;
 import tiger.com.lp.dailydemo.ui.NetworkActivity;
 import tiger.com.lp.dailydemo.ui.ObserverActivity;
@@ -174,6 +177,15 @@ public class MainActivity extends AppCompatActivity {
             case R.id.aidou:
                 //startActivity(new Intent(this, AiDouActivity.class));
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("agoo://com.tadu.read/thirdpush")));
+                break;
+            case R.id.motion:
+                startActivity(new Intent(this, MotionActivity.class));
+                break;
+            case R.id.motion_slide:
+                startActivity(new Intent(this, MotionSlideActivity.class));
+                break;
+            case R.id.canvas:
+                startActivity(new Intent(this, CanvasActivity.class));
                 break;
         }
     }
