@@ -8,8 +8,6 @@ import com.alibaba.android.arouter.BuildConfig;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 import tiger.com.lp.dailydemo.component.skin.SkinEngine;
-import tiger.com.lp.dailydemo.dagger.component.ApplicationComponent;
-import tiger.com.lp.dailydemo.dagger.component.DaggerApplicationComponent;
 import tiger.com.lp.dailydemo.utils.LogUtils;
 import tiger.com.lp.dailydemo.utils.MiitHelper;
 
@@ -22,7 +20,6 @@ import tiger.com.lp.dailydemo.utils.MiitHelper;
 public class ApplicationDaily extends Application implements MiitHelper.AppIdsUpdater {
     public static ApplicationDaily globalContext;
     private MiitHelper miitHelper;
-    public ApplicationComponent applicationComponent;
 
     @Override
     public void onCreate() {
@@ -41,7 +38,6 @@ public class ApplicationDaily extends Application implements MiitHelper.AppIdsUp
         ARouter.openLog();     // 打印日志
         ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
         ARouter.init(this); // 尽可能早，推荐在Application中初始化
-        applicationComponent = DaggerApplicationComponent.create();
     }
 
 

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
-      <module name="DailyDemo.app" target="11" />
-      <module name="DailyDemo.ioc-api" target="11" />
-      <module name="DailyDemo.skin_plugin" target="11" />
+      <module name="DailyDemo.app" target="17" />
+      <module name="DailyDemo.ioc-api" target="17" />
+      <module name="DailyDemo.skin_plugin" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
