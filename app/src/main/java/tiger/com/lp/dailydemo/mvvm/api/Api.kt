@@ -5,6 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Url
 import tiger.com.lp.dailydemo.mvvm.model.Notice
+import tiger.com.lp.dailydemo.mvvm.model.Token
 import tiger.com.lp.dailydemo.mvvm.model.User
 
 /**
@@ -19,4 +20,7 @@ interface Api {
 
     @GET
     fun getAiDouNotice(@Url url: String?): Call<Notice>
+
+    @GET
+    fun getVifiNotice(@Url url: String?): Call<List<Token>>
 }

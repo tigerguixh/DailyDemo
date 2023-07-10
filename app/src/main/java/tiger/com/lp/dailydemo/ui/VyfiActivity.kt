@@ -14,6 +14,7 @@ import retrofit2.Response
 import tiger.com.lp.dailydemo.databinding.ActivityMvvmBinding
 import tiger.com.lp.dailydemo.mvvm.api.Api
 import tiger.com.lp.dailydemo.mvvm.model.Notice
+import tiger.com.lp.dailydemo.mvvm.model.Token
 import tiger.com.lp.dailydemo.network.ApiFactory
 import tiger.com.lp.dailydemo.utils.LogUtils
 import java.util.concurrent.TimeUnit
@@ -25,7 +26,7 @@ import kotlin.random.Random
  * @date : 2022/8/24
  * @Description :
  */
-class AiDouActivity : AppCompatActivity(){
+class VyfiActivity : AppCompatActivity() {
     val handle = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,36 +34,43 @@ class AiDouActivity : AppCompatActivity(){
 
         setContentView(ActivityMvvmBinding.inflate(LayoutInflater.from(this)).getRoot())
 
-        Observable.interval(0, 2, TimeUnit.MINUTES) // 修改为主线程调用，防止在调用过程中子线程被销毁报错
+        Observable.interval(0, 30, TimeUnit.SECONDS) // 修改为主线程调用，防止在调用过程中子线程被销毁报错
             .observeOn(AndroidSchedulers.mainThread())
             .doOnNext { o: Long? -> loadData() }
             .subscribe()
     }
 
     fun loadData() {
-        val time = Random.nextInt(20000)
+        val time = Random.nextInt(10)
         handle.postDelayed({
             refresh()
         }, time.toLong())
     }
 
     fun refresh() {
-        val url = "https://api.hnhuigou.com/app/noticeList"
+        val url = "https://api.vyfi.io/token?networkId=1"
         ApiFactory.getInstance()
             .create(Api::class.java)
-            .getAiDouNotice(url)
-            .enqueue(
-                object : Callback<Notice> {
-                override fun onResponse(call: Call<Notice>, response: Response<Notice>) {
+            .getVifiNotice(url)
+            .enqueue(object : Callback<List<Token>> {
+                override fun onResponse(call: Call<List<Token>>, response: Response<List<Token>>) {
                     val notice = response.body()
-                    if (notice != null) {
-                        val title = notice.data.data.get(0).title
-                        LogUtils.i("AiDou notice: ", title)
-                        Toast.makeText(this@AiDouActivity, title, Toast.LENGTH_LONG).show()
+                    if (!notice.isNullOrEmpty()) {
+                        notice.forEach {
+                            if (it.assetName.equals("ANON", true)
+                                || it.assetName.equals("vyfi", true)
+                            ) {
+                                Toast.makeText(
+                                    this@VyfiActivity,
+                                    "${it.assetName}上线啦",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+                        }
                     }
                 }
 
-                override fun onFailure(call: Call<Notice>, t: Throwable) {
+                override fun onFailure(call: Call<List<Token>>, t: Throwable) {
                 }
 
             })

@@ -252,5 +252,12 @@
             android:layout_height="50dp"
             android:onClick="onButtonClick"
             android:text="canvas画布" />
+
+        <Button
+            android:id="@+id/vyfi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="onButtonClick"
+            android:text="Vyfi" />
     </LinearLayout>
 </ScrollView>

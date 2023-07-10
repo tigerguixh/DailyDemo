@@ -51,6 +51,7 @@ import tiger.com.lp.dailydemo.ui.SyncActivity;
 import tiger.com.lp.dailydemo.ui.TimerActivity;
 import tiger.com.lp.dailydemo.ui.TrendingActivity;
 import tiger.com.lp.dailydemo.ui.ViewModelActivity;
+import tiger.com.lp.dailydemo.ui.VyfiActivity;
 import tiger.com.lp.dailydemo.ui.WorkerActivity;
 import tiger.com.lp.dailydemo.utils.HookUtils;
 import tiger.com.lp.dailydemo.utils.JniUtils;
@@ -186,6 +187,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.canvas:
                 startActivity(new Intent(this, CanvasActivity.class));
+                break;
+            case R.id.vyfi:
+                startActivity(new Intent(this, VyfiActivity.class));
                 break;
         }
     }

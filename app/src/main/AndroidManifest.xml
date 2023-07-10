@@ -92,6 +92,7 @@
         <activity android:name=".ui.MotionActivity" />
         <activity android:name=".ui.MotionSlideActivity" />
         <activity android:name=".ui.CanvasActivity" />
+        <activity android:name=".ui.VyfiActivity" />
 
         <!--<receiver android:name=".receiver.NetworkReceiver">
             <intent-filter>
